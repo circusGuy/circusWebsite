@@ -12,11 +12,10 @@ GET `https://www.eventbriteapi.com/v3/users/me/?token=${token}` verifies subscri
 GET `https://www.eventbriteapi.com/v3/organizations/${id}/events/?time_filter=all` lists all events (all is all events current_future is all future events)
 GET `https://www.eventbriteapi.com/v3/events/{event_id}/?expand=ticket_availability` ticket availability
 
-
-
 */
 import axios from "axios";
-// import { insertEvents } from "./mongo";
+import app from './firebaseConfig';
+import { getDatabase, ref, set, push } from 'firebase/database';
 
 
 async function getEvents() {
@@ -33,17 +32,46 @@ async function getEvents() {
     });
     let res = response.data;
 
+  
     console.log(res);
     let events = res.events;
-  //  await insertEvents(events);
+    
     let eventsDis = events.map(
-      (m) =>
-        `<li><ul><li>Name:${m.name.text}</li><li>url: ${m.url}</li><li>Capacity: ${m.capacity}</li><li><a href="/checkout">Buy Tickets</a></li></li></ul></li>`
+      (m) =>{
+        const saveData = async () => {
+          const db = getDatabase(app);
+          const newEvent = push(ref(db, "events/events2"));
+          set(newEvent, {
+            name: m.name.text,
+            url: m.url,
+            capacity: m.capacity,
+
+          }).then( () => { 
+            alert("Data Save Successfully") 
+          }).catch((error) => {
+            alert("error:", error.message);
+          })
+        }
+        saveData();
+        return `<li><ul><li>Name:${m.name.text}</li><li>url: ${m.url}</li><li>Capacity: ${m.capacity}</li><li><a href="/checkout">Buy Tickets</a></li></li></ul></li>`;
+      }
+
     );
-    document.querySelector("#events").innerHTML = `<ul>${eventsDis}</ul>`;
+   document.querySelector("#events").innerHTML = `<ul>${eventsDis}</ul>`;
   } catch (error) {
     console.error("Error fetching data:", error);
   }
 }
 export default getEvents;
+
+
+
+
+
+ 
+
+ 
+
+
+  
 
