@@ -40,6 +40,7 @@ async function getEvents() {
       (m) =>{
         const saveData = async () => {
           const db = getDatabase(app);
+          console.log(m)
           const newEvent = push(ref(db, "events/events2"));
           set(newEvent, {
             name: m.name.text,
