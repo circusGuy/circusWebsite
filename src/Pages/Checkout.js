@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 function Checkout() {
-  let id = "1100323771019";
+  let id = "1100323771019"
   useEffect(() => {
     const exampleCallback = () => {
       console.log("Order complete!");
