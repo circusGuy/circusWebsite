@@ -48,7 +48,7 @@ async function getEvents() {
             capacity: m.capacity,
 
           }).then( () => { 
-            alert("Data Save Successfully") 
+            console.log("Data Save Successfully") 
           }).catch((error) => {
             alert("error:", error.message);
           })
