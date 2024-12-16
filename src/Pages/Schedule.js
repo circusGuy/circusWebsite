@@ -13,7 +13,7 @@ export default function Schedule() {
 
   return (
       <div>
-          {/* <button onClick={getEvents}>Click me</button> */}
+          <button onClick={getEvents}>Click me</button>
           <div id="events"></div>
           <button onClick={()=>{removeAll()}}>Remove</button>
       </div>
