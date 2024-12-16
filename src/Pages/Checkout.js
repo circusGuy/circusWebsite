@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import '../CSS/checkout.css';
 
 function Checkout() {
   let id = "1115777493519"
@@ -31,9 +32,7 @@ function Checkout() {
   }, [id]);
 
   return (
-   
       <div class="checkout">
-        <div>Hi Caleb</div>
         <div id="example-widget-trigger" />
       </div>
   );

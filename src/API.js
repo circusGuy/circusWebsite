@@ -15,8 +15,13 @@ GET `https://www.eventbriteapi.com/v3/events/{event_id}/?expand=ticket_availabil
 */
 import axios from "axios";
 import app from './firebaseConfig';
-import { getDatabase, ref, set, push } from 'firebase/database';
+import { getDatabase, ref, set, push, remove } from 'firebase/database';
 
+async function removeAll(){
+  const db = getDatabase(app);
+  const dbref = ref(db, "events");
+  await remove(dbref);
+}
 
 async function getEvents() {
   const id = "2404201774443";
@@ -30,18 +35,20 @@ async function getEvents() {
         Authorization: `Bearer ${token}`,
       },
     });
+    removeAll();
+
     let res = response.data;
 
-  
     console.log(res);
     let events = res.events;
+
     
     let eventsDis = events.map(
       (m) =>{
         const saveData = async () => {
           const db = getDatabase(app);
           console.log(m)
-          const newEvent = push(ref(db, "events/events2"));
+          const newEvent = push(ref(db, "events"));
           set(newEvent, {
             name: m.name.text,
             url: m.url,
@@ -54,6 +61,7 @@ async function getEvents() {
           })
         }
         saveData();
+
         return `<li><ul><li>Name:${m.name.text}</li><li>url: ${m.url}</li><li>Capacity: ${m.capacity}</li><li><a href="/checkout">Buy Tickets</a></li></li></ul></li>`;
       }
 
