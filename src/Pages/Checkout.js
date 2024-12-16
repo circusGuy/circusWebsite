@@ -1,8 +1,13 @@
 import { useEffect } from "react";
 import '../CSS/checkout.css';
+import { useLocation } from 'react-router-dom';
+
 
 function Checkout() {
-  let id = "1115777493519"
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search); 
+  const id = queryParams.get('id');
+
   useEffect(() => {
     const exampleCallback = () => {
       console.log("Order complete!");

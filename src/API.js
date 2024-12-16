@@ -25,7 +25,7 @@ async function removeAll(){
 
 async function getEvents() {
   const id = "2404201774443";
-  const url = `https://www.eventbriteapi.com/v3/organizations/${id}/events/?time_filter=all`;
+  const url = `https://www.eventbriteapi.com/v3/organizations/${id}/events/?time_filter=current_future`;
   const token = "NEMSZJPVJRTZ2W7LCY2F";
   // const url = `https://www.eventbriteapi.com/v3/users/me/?token=${token}`;
 
@@ -62,7 +62,7 @@ async function getEvents() {
         }
         saveData();
 
-        return `<li><ul><li>Name:${m.name.text}</li><li>url: ${m.url}</li><li>Capacity: ${m.capacity}</li><li><a href="/checkout">Buy Tickets</a></li></li></ul></li>`;
+        return `<li><ul><li>Name:${m.name.text}</li><li>url: ${m.url}</li><li>Capacity: ${m.capacity}</li><li><a href="/checkout?id=${m.id}">Buy Tickets</a></li></li></ul></li>`;
       }
 
     );
@@ -72,15 +72,3 @@ async function getEvents() {
   }
 }
 export default getEvents;
-
-
-
-
-
- 
-
- 
-
-
-  
-
