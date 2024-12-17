@@ -62,7 +62,7 @@ async function getEvents() {
         }
         saveData();
 
-        return `<li><ul><li>Name:${m.name.text}</li><li>url: ${m.url}</li><li>Capacity: ${m.capacity}</li><li><a href="/checkout?id=${m.id}">Buy Tickets</a></li></li></ul></li>`;
+        return `<li><ul><li>Name:${m.name.text}</li><li>url: ${m.url}</li><li><a href="/checkout?id=${m.id}">Buy Tickets</a></li></li></ul></li>`;
       }
 
     );
