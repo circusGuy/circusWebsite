@@ -75,7 +75,6 @@ async function getEvents() {
 
 
     if(localStorage.getItem("lastRefresh") === null){
-      alert(localStorage.getItem("lastRefresh"))
       await updateEvents();
     }
     else {
