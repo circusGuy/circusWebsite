@@ -80,8 +80,6 @@ async function getEvents() {
     }
     else {
       let time = new Date();
-      alert(Date.now())
-      alert(localStorage.getItem("lastRefresh"))
       if(time - localStorage.getItem("lastRefresh") > REFRESH_EXPIRATION_TIME){
         await updateEvents();
       }
