@@ -18,53 +18,53 @@ import app from "./firebaseConfig";
 import { getDatabase, ref, set, get, push, remove } from "firebase/database";
 
 
-async function removeAll() {
-  const db = getDatabase(app);
-  const dbref = ref(db, "events");
-  await remove(dbref);
-}
+// async function removeAll() {
+//   const db = getDatabase(app);
+//   const dbref = ref(db, "events");
+//   await remove(dbref);
+// }
+
+// async function getEvents() {
+//   const id = "2404201774443";
+//   const url = `https://www.eventbriteapi.com/v3/organizations/${id}/events/?time_filter=current_future`;
+//   const token = "NEMSZJPVJRTZ2W7LCY2F";
+
+//   try {
+//     const response = await axios.get(url, {
+//       headers: {
+//         Authorization: `Bearer ${token}`,
+//       },
+//     });
+//     removeAll();
+
+//     let res = response.data;
+//     let events = res.events;
+//     const db = getDatabase(app);
+
+//     events.forEach((m) => {
+//       const saveData = async () => {
+//         console.log(m);
+//         const newEvent = push(ref(db, "events"));
+//         set(newEvent, {
+//           name: m.name.text,
+//           url: m.url,
+//           id: m.id,
+//         })
+//           .then(() => {
+//             console.log("Data Save Successfully");
+//           })
+//           .catch((error) => {
+//             alert("error:", error.message);
+//           });
+//       };
+//       saveData();
+//     });
+//   } catch (error) {
+//     console.error("Error fetching data:", error);
+//   }
+// }
 
 async function getEvents() {
- // const id = "2404201774443";
-  const url = `https://www.eventbriteapi.com/v3/organizations/${process.env.ORGANIZATION_ID}/events/?time_filter=current_future`;
-  const token = "NEMSZJPVJRTZ2W7LCY2F";
-
-  try {
-    const response = await axios.get(url, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-    removeAll();
-
-    let res = response.data;
-    let events = res.events;
-    const db = getDatabase(app);
-
-    events.forEach((m) => {
-      const saveData = async () => {
-        console.log(m);
-        const newEvent = push(ref(db, "events"));
-        set(newEvent, {
-          name: m.name.text,
-          url: m.url,
-          id: m.id,
-        })
-          .then(() => {
-            console.log("Data Save Successfully");
-          })
-          .catch((error) => {
-            alert("error:", error.message);
-          });
-      };
-      saveData();
-    });
-  } catch (error) {
-    console.error("Error fetching data:", error);
-  }
-}
-
-async function getEvents2() {
   try {
     const db = getDatabase(app);
     const dbRef = ref(db, "events");
