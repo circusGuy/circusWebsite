@@ -18,56 +18,75 @@ import app from "./firebaseConfig";
 import { getDatabase, ref, set, get, push, remove } from "firebase/database";
 
 
-// async function removeAll() {
-//   const db = getDatabase(app);
-//   const dbref = ref(db, "events");
-//   await remove(dbref);
-// }
+const REFRESH_EXPIRATION_TIME = 3600000;
 
-// async function getEvents() {
-//   const id = "2404201774443";
-//   const url = `https://www.eventbriteapi.com/v3/organizations/${id}/events/?time_filter=current_future`;
-//   const token = "NEMSZJPVJRTZ2W7LCY2F";
+async function removeAll() {
+  const db = getDatabase(app);
+  const dbref = ref(db, "events");
+  await remove(dbref);
+}
 
-//   try {
-//     const response = await axios.get(url, {
-//       headers: {
-//         Authorization: `Bearer ${token}`,
-//       },
-//     });
-//     removeAll();
+async function updateEvents() {
+  const id = "2404201774443";
+  const url = `https://www.eventbriteapi.com/v3/organizations/${id}/events/?time_filter=current_future`;
+  const token = "NEMSZJPVJRTZ2W7LCY2F";
 
-//     let res = response.data;
-//     let events = res.events;
-//     const db = getDatabase(app);
+  try {
+    const response = await axios.get(url, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    removeAll();
 
-//     events.forEach((m) => {
-//       const saveData = async () => {
-//         console.log(m);
-//         const newEvent = push(ref(db, "events"));
-//         set(newEvent, {
-//           name: m.name.text,
-//           url: m.url,
-//           id: m.id,
-//         })
-//           .then(() => {
-//             console.log("Data Save Successfully");
-//           })
-//           .catch((error) => {
-//             alert("error:", error.message);
-//           });
-//       };
-//       saveData();
-//     });
-//   } catch (error) {
-//     console.error("Error fetching data:", error);
-//   }
-// }
+    let res = response.data;
+    let events = res.events;
+    const db = getDatabase(app);
+
+    events.forEach((m) => {
+      const saveData = async () => {
+        console.log(m);
+        const newEvent = push(ref(db, "events"));
+        set(newEvent, {
+          name: m.name.text,
+          url: m.url,
+          id: m.id,
+        })
+          .then(() => {
+            console.log("Data Save Successfully");
+          })
+          .catch((error) => {
+            alert("error:", error.message);
+          });
+      };
+      saveData();
+    });
+    localStorage.setItem("lastRefresh", Date.now());
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+}
 
 async function getEvents() {
   try {
     const db = getDatabase(app);
     const dbRef = ref(db, "events");
+
+
+
+    if(localStorage.getItem("lastRefresh") === null){
+      alert(localStorage.getItem("lastRefresh"))
+      await updateEvents();
+    }
+    else {
+      let time = new Date();
+      alert(Date.now())
+      alert(localStorage.getItem("lastRefresh"))
+      if(time - localStorage.getItem("lastRefresh") > REFRESH_EXPIRATION_TIME){
+        await updateEvents();
+      }
+    }
+
 
     get(dbRef)
       .then((snapshot) => {
