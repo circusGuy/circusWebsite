@@ -14,20 +14,20 @@ GET `https://www.eventbriteapi.com/v3/events/{event_id}/?expand=ticket_availabil
 
 */
 import axios from "axios";
-import app from './firebaseConfig';
-import { getDatabase, ref, set, push, remove } from 'firebase/database';
+import app from "./firebaseConfig";
+import { getDatabase, ref, set, get, push, remove } from "firebase/database";
 
-async function removeAll(){
+
+async function removeAll() {
   const db = getDatabase(app);
   const dbref = ref(db, "events");
   await remove(dbref);
 }
 
 async function getEvents() {
-  const id = "2404201774443";
-  const url = `https://www.eventbriteapi.com/v3/organizations/${id}/events/?time_filter=current_future`;
+ // const id = "2404201774443";
+  const url = `https://www.eventbriteapi.com/v3/organizations/${process.env.ORGANIZATION_ID}/events/?time_filter=current_future`;
   const token = "NEMSZJPVJRTZ2W7LCY2F";
-  // const url = `https://www.eventbriteapi.com/v3/users/me/?token=${token}`;
 
   try {
     const response = await axios.get(url, {
@@ -38,35 +38,52 @@ async function getEvents() {
     removeAll();
 
     let res = response.data;
-
-    console.log(res);
     let events = res.events;
+    const db = getDatabase(app);
 
-    
-    let eventsDis = events.map(
-      (m) =>{
-        const saveData = async () => {
-          const db = getDatabase(app);
-          console.log(m)
-          const newEvent = push(ref(db, "events"));
-          set(newEvent, {
-            name: m.name.text,
-            url: m.url,
-            capacity: m.capacity,
-
-          }).then( () => { 
-            console.log("Data Save Successfully") 
-          }).catch((error) => {
-            alert("error:", error.message);
+    events.forEach((m) => {
+      const saveData = async () => {
+        console.log(m);
+        const newEvent = push(ref(db, "events"));
+        set(newEvent, {
+          name: m.name.text,
+          url: m.url,
+          id: m.id,
+        })
+          .then(() => {
+            console.log("Data Save Successfully");
           })
+          .catch((error) => {
+            alert("error:", error.message);
+          });
+      };
+      saveData();
+    });
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+}
+
+async function getEvents2() {
+  try {
+    const db = getDatabase(app);
+    const dbRef = ref(db, "events");
+
+    get(dbRef)
+      .then((snapshot) => {
+        if (snapshot.exists()) {
+          const events = snapshot.val();
+          const eventsDis = Object.values(events).map((m) => {
+            return `<li><ul><li>Name:${m.name}</li><li>url: ${m.url}</li><li><a href="/checkout?id=${m.id}">Buy Tickets</a></li></li></ul></li>`;
+          });
+          document.querySelector("#events").innerHTML = `<ul>${eventsDis}</ul>`;
+        } else {
+          console.log("No data available");
         }
-        saveData();
-
-        return `<li><ul><li>Name:${m.name.text}</li><li>url: ${m.url}</li><li><a href="/checkout?id=${m.id}">Buy Tickets</a></li></li></ul></li>`;
-      }
-
-    );
-   document.querySelector("#events").innerHTML = `<ul>${eventsDis}</ul>`;
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   } catch (error) {
     console.error("Error fetching data:", error);
   }

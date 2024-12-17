@@ -1,7 +1,8 @@
 
 export default function Photos() {
   return (
-      <div>Photos</div>
+    <div>
+      <h1>Photos</h1>
+    </div>
   );
 }
-

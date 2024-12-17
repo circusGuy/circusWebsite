@@ -6,7 +6,6 @@ export default function Schedule() {
       <div>
           <button onClick={getEvents}>Click me</button>
           <div id="events"></div>
-
       </div>
   );
 }
