@@ -18,12 +18,18 @@ import app from "./firebaseConfig";
 import { getDatabase, ref, set, get, push, remove } from "firebase/database";
 
 
-const REFRESH_EXPIRATION_TIME = 3600000;
+const REFRESH_EXPIRATION_TIME =  3600000;
 
 async function removeAll() {
   const db = getDatabase(app);
   const dbref = ref(db, "events");
   await remove(dbref);
+}
+
+async function timeReset() {
+  const db = getDatabase(app);
+  const timeref = ref(db, "time");
+  await remove(timeref);
 }
 
 async function updateEvents() {
@@ -38,6 +44,7 @@ async function updateEvents() {
       },
     });
     removeAll();
+    timeReset();
 
     let res = response.data;
     let events = res.events;
@@ -61,7 +68,11 @@ async function updateEvents() {
       };
       saveData();
     });
-    localStorage.setItem("lastRefresh", Date.now());
+
+    const timestamp = push(ref(db, "time"));
+        set(timestamp, {
+          'lastRefresh': Date.now()
+        })
   } catch (error) {
     console.error("Error fetching data:", error);
   }
@@ -71,19 +82,27 @@ async function getEvents() {
   try {
     const db = getDatabase(app);
     const dbRef = ref(db, "events");
+    const timeRef = ref(db, "time");
 
-
-
-    if(localStorage.getItem("lastRefresh") === null){
-      await updateEvents();
-    }
-    else {
-      let time = new Date();
-      if(time - localStorage.getItem("lastRefresh") > REFRESH_EXPIRATION_TIME){
-        await updateEvents();
+    get(timeRef)
+    .then((snapshot) => {
+      if (snapshot.exists()) {
+        const timeSnap = snapshot.val();
+        const timestamp = Object.values(timeSnap)[0].lastRefresh;
+        let time = new Date();
+        if(time - timestamp >= REFRESH_EXPIRATION_TIME){
+          updateEvents();
+          set(Object.values(timeSnap)[0], {
+            'lastRefresh': Date.now()
+          })
+        }
+      } else {
+        updateEvents();
       }
-    }
-
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 
     get(dbRef)
       .then((snapshot) => {
