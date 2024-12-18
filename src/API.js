@@ -1,59 +1,47 @@
 /*
-API key: PYUXRI5IDPDXBAJKYY
-Client secret: VNT5L5T47B667YWGWREPP4BLN5UWHS47HE7IHCBA2J2FTOUKDM
-Private token: NEMSZJPVJRTZ2W7LCY2F
-Public token: R5JZMBXB5WSTIZ64PXGC
-
-organization id: 2404201774443;
-
 !!! IMPORTANT REQUEST URLS !!!
 GET 'https://www.eventbriteapi.com/v3/users/me/organizations/' gets organization id
 GET `https://www.eventbriteapi.com/v3/users/me/?token=${token}` verifies subscription exists
 GET `https://www.eventbriteapi.com/v3/organizations/${id}/events/?time_filter=all` lists all events (all is all events current_future is all future events)
 GET `https://www.eventbriteapi.com/v3/events/{event_id}/?expand=ticket_availability` ticket availability
-
 */
 import axios from "axios";
 import app from "./firebaseConfig";
 import { getDatabase, ref, set, get, push, remove } from "firebase/database";
 
+//3600000
 
-const REFRESH_EXPIRATION_TIME =  3600000;
+const REFRESH_EXPIRATION_TIME = 10000;
+const db = getDatabase(app);
+const dbref = ref(db, "events");
+const timeRef = ref(db, "time");
 
-async function removeAll() {
-  const db = getDatabase(app);
-  const dbref = ref(db, "events");
+async function dbReset() {
   await remove(dbref);
 }
-
 async function timeReset() {
-  const db = getDatabase(app);
-  const timeref = ref(db, "time");
-  await remove(timeref);
+  await remove(timeRef);
 }
 
 async function updateEvents() {
-  const id = "2404201774443";
-  const url = `https://www.eventbriteapi.com/v3/organizations/${id}/events/?time_filter=current_future`;
-  const token = "NEMSZJPVJRTZ2W7LCY2F";
+  const url = `https://www.eventbriteapi.com/v3/organizations/${process.env.REACT_APP_ORG_ID}/events/?time_filter=current_future`;
 
   try {
     const response = await axios.get(url, {
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${process.env.REACT_APP_BEARER_TOKEN}`,
       },
     });
-    removeAll();
+    dbReset();
     timeReset();
 
     let res = response.data;
     let events = res.events;
-    const db = getDatabase(app);
 
     events.forEach((m) => {
       const saveData = async () => {
         console.log(m);
-        const newEvent = push(ref(db, "events"));
+        const newEvent = push(dbref);
         set(newEvent, {
           name: m.name.text,
           url: m.url,
@@ -68,43 +56,41 @@ async function updateEvents() {
       };
       saveData();
     });
+    let time = Date.now();
 
-    const timestamp = push(ref(db, "time"));
-        set(timestamp, {
-          'lastRefresh': Date.now()
-        })
+    const timestamp = push(timeRef);
+    set(timestamp, {
+      lastRefresh: time,
+    });
   } catch (error) {
     console.error("Error fetching data:", error);
   }
 }
 
-async function getEvents() {
+export default async function getEvents() {
   try {
-    const db = getDatabase(app);
-    const dbRef = ref(db, "events");
-    const timeRef = ref(db, "time");
-
+    // Reset on time
     get(timeRef)
-    .then((snapshot) => {
-      if (snapshot.exists()) {
-        const timeSnap = snapshot.val();
-        const timestamp = Object.values(timeSnap)[0].lastRefresh;
-        let time = new Date();
-        if(time - timestamp >= REFRESH_EXPIRATION_TIME){
+      .then((snapshot) => {
+        if (snapshot.exists()) {
+          const timeSnap = snapshot.val();
+          const timestamp = Object.values(timeSnap)[0].lastRefresh;
+          let time = new Date();
+          if (time - timestamp >= REFRESH_EXPIRATION_TIME) {
+            updateEvents();
+            set(Object.values(timeSnap)[0], {
+              lastRefresh: Date.now(),
+            });
+          }
+        } else {
           updateEvents();
-          set(Object.values(timeSnap)[0], {
-            'lastRefresh': Date.now()
-          })
         }
-      } else {
-        updateEvents();
-      }
-    })
-    .catch((error) => {
-      console.error(error);
-    });
+      })
+      .catch((error) => {
+        console.error(error);
+      });
 
-    get(dbRef)
+    get(dbref)
       .then((snapshot) => {
         if (snapshot.exists()) {
           const events = snapshot.val();
@@ -123,4 +109,3 @@ async function getEvents() {
     console.error("Error fetching data:", error);
   }
 }
-export default getEvents;
