@@ -9,7 +9,7 @@ import axios from "axios";
 import app from "./firebaseConfig";
 import { getDatabase, ref, set, get, push, remove } from "firebase/database";
 
-const REFRESH_EXPIRATION_TIME = 3600000;
+const REFRESH_EXPIRATION_TIME = 5000;
 const db = getDatabase(app);
 const dbref = ref(db, "events");
 const timeRef = ref(db, "time");
