@@ -9,7 +9,7 @@ import axios from "axios";
 import app from "./firebaseConfig";
 import { getDatabase, ref, set, get, push, remove } from "firebase/database";
 
-const REFRESH_EXPIRATION_TIME = 3600000;
+const REFRESH_EXPIRATION_TIME = 5000;
 const db = getDatabase(app);
 const dbref = ref(db, "events");
 const timeRef = ref(db, "time");
@@ -22,12 +22,12 @@ async function timeReset() {
 }
 
 async function updateEvents() {
-  const url = `https://www.eventbriteapi.com/v3/organizations/${process.env.ORG_ID}/events/?time_filter=current_future`;
+  const url = `https://www.eventbriteapi.com/v3/organizations/${process.env.REACT_APP_ORG_ID}/events/?time_filter=current_future`;
 
   try {
     const response = await axios.get(url, {
       headers: {
-        Authorization: `Bearer ${process.env.BEARER_TOKEN}`,
+        Authorization: `Bearer ${process.env.REACT_APP_BEARER_TOKEN}`,
       },
     });
     dbReset();
