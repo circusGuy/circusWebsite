@@ -49,7 +49,7 @@ export default function Header() {
                   location.pathname === "/schedule" ? "active" : ""
                 }`}
               >
-                Tour
+                Schedule
               </Link>
               
               <Link
@@ -141,7 +141,7 @@ export default function Header() {
               href="/schedule"
               onClick={toggleDrawer(false)}
             >
-              <ListItemText primary="Tour" />
+              <ListItemText primary="Schedule" />
             </ListItem>
             <ListItem
               button
