@@ -11,7 +11,7 @@ export default function Contact() {
               <div className="text-gradient2 md:text-4xl sm:text-xl mb-3">
                 <h1>Contact Support</h1>
               </div>
-              <Divider class="mt-3 mb-6" />
+              <Divider class="mb-6" />
 
               <div class="form">
                 <div class="formColumn">

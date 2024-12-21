@@ -101,11 +101,15 @@ textarea {
       width: 100%;
     }
 
+    h1{
+        font-size: 23px;
+    }
+
     .submitBtn {
         background-color: green;
         color: white;
         padding: 0.5vw;
-        font-size: 5vw;
+        font-size: 20px;
         width: 100%;
       }
 }

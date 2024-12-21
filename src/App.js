@@ -8,7 +8,8 @@ import Contact from "./Pages/Contact"
 import Photos from "./Pages/Photos";
 import Schedule from "./Pages/Schedule";
 import Footer from './Components/Footer'
-
+import Concessions from "./Pages/Concessions";
+import Faq from './Pages/Faq'
 
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
         <Route path="/schedule" element={<Schedule/>} />
         <Route path="/checkout" element={<Checkout/>} />
         <Route path="/contact" element={<Contact/>} />
+        <Route path="/concessions" element={<Concessions/>} />
+        <Route path="/faq" element={<Faq/>} />
       </Routes>
       <Footer/>
     </Router>

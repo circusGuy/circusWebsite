@@ -1,4 +1,4 @@
-import { Box, Stack, Link, Divider } from "@mui/material";
+import { Box, Stack, Link } from "@mui/material";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import "../CSS/footer.css";
 
@@ -21,7 +21,6 @@ export default function Footer() {
               <FaInstagram size={32} />
             </Link>
           </Stack>
-          <Divider sx={{ bgcolor: "gray", width: "100%"}} />
 
           <Link href="mailto:umdwebmast3r@gmail.com" underline="none">
             <strong>
