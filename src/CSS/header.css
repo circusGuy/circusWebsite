@@ -1,0 +1,59 @@
+
+  .navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5%;
+    align-self: center;
+    justify-self: center;
+  }
+  
+  .header-container {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo {
+    z-index: 2; /* Ensures the logo appears above the bar */
+    width: auto;
+    max-height: 20vh; /* Adjust the size as needed */
+  }
+  
+  .lollipop-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: fixed;
+    width: 90%; 
+    padding-top:1.2%;
+    padding-bottom:1.2%;
+    background-color: purple;
+    z-index: 1;
+    
+  }
+
+  .lollipop-bar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3vw;
+  }
+  
+  .lollipop-bar a:hover {
+    text-decoration: underline;
+    text-decoration-color: yellow;
+    text-decoration-thickness: 0.5vh;
+    text-underline-offset: 1vh;
+  }
+
+  .lollipop-bar .active{
+    color: yellow;
+    text-decoration: underline;
+    text-decoration-color: yellow;
+    text-decoration-thickness: 0.5vh;
+    text-underline-offset: 1vh;
+  }
+  

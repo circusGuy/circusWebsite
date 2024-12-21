@@ -8,8 +8,8 @@ GET `https://www.eventbriteapi.com/v3/events/{event_id}/?expand=ticket_availabil
 import axios from "axios";
 import app from "./firebaseConfig";
 import { getDatabase, ref, set, get, push, remove } from "firebase/database";
-
-const REFRESH_EXPIRATION_TIME = 5000;
+//3600000
+const REFRESH_EXPIRATION_TIME = 3600000;
 const db = getDatabase(app);
 const dbref = ref(db, "events");
 const timeRef = ref(db, "time");
@@ -22,7 +22,7 @@ async function timeReset() {
 }
 
 async function updateEvents() {
-  const url = `https://www.eventbriteapi.com/v3/organizations/${process.env.REACT_APP_ORG_ID}/events/?time_filter=current_future`;
+  const url = `https://www.eventbriteapi.com/v3/organizations/${process.env.REACT_APP_ORG_ID}/events/?time_filter=current_future&expand=venue`;
 
   try {
     const response = await axios.get(url, {
@@ -41,9 +41,12 @@ async function updateEvents() {
         console.log(m);
         const newEvent = push(dbref);
         set(newEvent, {
-          name: m.name.text,
           url: m.url,
           id: m.id,
+          city: m.venue.address.city,
+          state: m.venue.address.region,
+          location: m.venue.name,
+          date: m.start.utc
         })
           .then(() => {
             console.log("Data Save Successfully");
@@ -67,43 +70,34 @@ async function updateEvents() {
 
 export default async function getEvents() {
   try {
-    // Reset on time
-    get(timeRef)
-      .then((snapshot) => {
-        if (snapshot.exists()) {
-          const timeSnap = snapshot.val();
-          const timestamp = Object.values(timeSnap)[0].lastRefresh;
-          let time = new Date();
-          if (time - timestamp >= REFRESH_EXPIRATION_TIME) {
-            updateEvents();
-            set(Object.values(timeSnap)[0], {
-              lastRefresh: Date.now(),
-            });
-          }
-        } else {
-          updateEvents();
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    const timeSnapshot = await get(timeRef);
 
-    get(dbref)
-      .then((snapshot) => {
-        if (snapshot.exists()) {
-          const events = snapshot.val();
-          const eventsDis = Object.values(events).map((m) => {
-            return `<li><ul><li>Name:${m.name}</li><li>url: ${m.url}</li><li><a href="/checkout?id=${m.id}">Buy Tickets</a></li></li></ul></li>`;
-          });
-          document.querySelector("#events").innerHTML = `<ul>${eventsDis}</ul>`;
-        } else {
-          console.log("No data available");
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    if (timeSnapshot.exists()) {
+      const timeSnap = timeSnapshot.val();
+      const timestamp = Object.values(timeSnap)[0].lastRefresh;
+      const time = new Date();
+
+      if (time - timestamp >= REFRESH_EXPIRATION_TIME) {
+        await updateEvents();
+        await set(Object.values(timeSnap)[0], {
+          lastRefresh: Date.now(),
+        });
+      }
+    } else {
+      await updateEvents();
+    }
+
+    const eventsSnapshot = await get(dbref);
+
+    if (eventsSnapshot.exists()) {
+      const events = eventsSnapshot.val();
+      return Object.values(events); // Return the actual array here
+    } else {
+      return []; // Return an empty array if no events exist
+    }
   } catch (error) {
     console.error("Error fetching data:", error);
+    return []; // Return an empty array in case of an error
   }
 }
+

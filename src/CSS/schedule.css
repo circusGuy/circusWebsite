@@ -1,0 +1,70 @@
+.checkoutBtn  {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    font-size: 1vw;
+    width: 8vw; /* Adjusted for better visibility */
+    height: 4vw; /* Makes it square */
+    display: flex; /* Flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    text-align: center;
+    border-radius: 1vw;
+    cursor: pointer;
+  }
+  .checkoutGroup {
+    display: flex; /* Enable flexbox for the group */
+    flex-direction: row; /* Align items horizontally */
+    justify-content: flex-end; /* Align items in the group to the right */
+    margin-top: 1vw; /* Space from the top */
+    margin-left: auto; /* Push the .checkoutGroup to the right */
+    margin-right: 2vw;
+    
+  }
+
+  .locHeader{
+    color: yellow;
+    font-size: 1.5vw;
+    font-weight: bold;
+    width: 100%;
+    background-color:  purple;
+    display: flex;
+    justify-content: center;
+    border: black 1px solid;
+  }
+
+  .row{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    color: black;
+    justify-content: flex-start;
+  }
+  
+  .checkoutBtn:hover {
+    background-color: rgba(14, 128, 20, 0.411);
+  }
+  
+
+  .dateBox {
+    background-color: purple;
+    color: yellow;
+    font-weight: bold;
+    font-size: 1.3vw;
+
+    width: 6vw; /* Adjusted for better visibility */
+    height: 6vw; /* Makes it square */
+    display: flex; /* Flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    text-align: center;
+    margin-right: 2vw;
+  }
+  
+  .subPage{
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  

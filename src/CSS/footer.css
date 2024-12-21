@@ -1,0 +1,6 @@
+footer{
+    position: fixed;
+    background-color: purple;
+    width: 100%;
+    bottom: 0;
+}
