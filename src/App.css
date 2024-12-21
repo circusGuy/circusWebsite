@@ -6,6 +6,9 @@
   justify-content: center;
   align-items: center;
 }
+body{
+  background-color: purple;
+}
 
 body{
   background-image: url('./Images/bg.png');
@@ -16,9 +19,11 @@ body{
 
 .page{
   padding: 5% 5% 5% 5%;
+  margin-top: 1%;
 }
 
 body::-webkit-scrollbar {
   display: none;
 }
+
 

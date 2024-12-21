@@ -1,0 +1,111 @@
+form {
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 3vw;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+}
+
+h1{
+    font-weight: bold;
+}
+
+.subPage2 {
+  background-color: white;
+  border-radius: 4px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: black;
+}
+
+input,
+textarea,
+select {
+  border: 1.5px rgb(180, 178, 178) solid;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  color: black;
+}
+
+.formColumn {
+  width: 100%;
+  display: grid;
+  grid-auto-flow: row;
+  grid-column-gap: 10px;
+}
+
+.formColumn:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin-left: 2vw;
+  align-items: center;
+}
+
+input,
+select {
+  padding: 0.5vw;
+  width: 100%;
+  margin-bottom: 3vh;
+}
+
+textarea {
+  width: 100%;
+  margin-bottom: 2.5vh;
+  padding: 10px;
+}
+
+.submitBtn {
+  background-color: green;
+  color: white;
+  padding: 0.5vw;
+  font-size: 1vw;
+  width: 100%;
+  border-radius: 2px;
+}
+
+.submitBtn:hover {
+  cursor: pointer;
+  background-color: lightgreen;
+}
+
+
+@media screen and (max-width: 1450px) {
+    .form {
+      flex-direction: column; /* Stack the columns vertically */
+    }
+  
+    .formColumn {
+      width: 100%; /* Make each column take up full width */
+    }
+
+    .formColumn:nth-of-type(2) {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        margin-left: 0;
+        align-items: center;
+      }
+  
+    /* Optional: Adjust the textarea size on smaller screens */
+    textarea {
+      width: 100%;
+    }
+
+    .submitBtn {
+        background-color: green;
+        color: white;
+        padding: 0.5vw;
+        font-size: 5vw;
+        width: 100%;
+      }
+}

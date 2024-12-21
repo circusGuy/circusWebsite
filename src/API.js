@@ -10,6 +10,8 @@ import app from "./firebaseConfig";
 import { getDatabase, ref, set, get, push, remove } from "firebase/database";
 //3600000
 const REFRESH_EXPIRATION_TIME = 3600000;
+const url = `https://www.eventbriteapi.com/v3/organizations/${process.env.REACT_APP_ORG_ID}/events/?time_filter=current_future&expand=venue`;
+
 const db = getDatabase(app);
 const dbref = ref(db, "events");
 const timeRef = ref(db, "time");
@@ -22,8 +24,6 @@ async function timeReset() {
 }
 
 async function updateEvents() {
-  const url = `https://www.eventbriteapi.com/v3/organizations/${process.env.REACT_APP_ORG_ID}/events/?time_filter=current_future&expand=venue`;
-
   try {
     const response = await axios.get(url, {
       headers: {
@@ -46,7 +46,7 @@ async function updateEvents() {
           city: m.venue.address.city,
           state: m.venue.address.region,
           location: m.venue.name,
-          date: m.start.utc
+          date: m.start.utc,
         })
           .then(() => {
             console.log("Data Save Successfully");
@@ -91,13 +91,12 @@ export default async function getEvents() {
 
     if (eventsSnapshot.exists()) {
       const events = eventsSnapshot.val();
-      return Object.values(events); // Return the actual array here
+      return Object.values(events);
     } else {
-      return []; // Return an empty array if no events exist
+      return []; 
     }
   } catch (error) {
     console.error("Error fetching data:", error);
-    return []; // Return an empty array in case of an error
+    return [];
   }
 }
-

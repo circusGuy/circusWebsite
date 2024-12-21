@@ -3,14 +3,15 @@ import { useState } from "react";
 import "../CSS/schedule.css";
 import { Stack } from "@mui/material";
 
+
 function eventCard(event) {
   const [date, timeWithZone] = event.date.split("T");
   let time = timeWithZone.replace("Z", "");
 
-  const [hours, minutes, seconds] = time.split(":");
+  const [hours, minutes] = time.split(":");
   const period = +hours >= 12 ? "PM" : "AM";
   const hours12 = +hours % 12 || 12;
-  time = `${hours12}:${minutes}:${seconds} ${period}`;
+  time = `${hours12}:${minutes} ${period}`;
 
   const dateStr = new Date(date);
 
@@ -38,9 +39,9 @@ function eventCard(event) {
             </div>
           </Stack>
           <Stack spacing={4} direction='row' className='checkoutGroup'><a href={`/checkout?id=${event.id}`} class="checkoutBtn">
-            {time} (UTC)
+            {time}
           </a><a href={`/checkout?id=${event.id}`} class="checkoutBtn">
-            {time} (UTC)
+            {time}
           </a></Stack>
         </Stack>
       </div>
@@ -50,6 +51,8 @@ function eventCard(event) {
 }
 
 export default function Schedule() {
+ 
+
   const [eventList, setEventList] = useState([]);
 
   (async () => {

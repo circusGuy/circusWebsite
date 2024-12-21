@@ -31,7 +31,7 @@
     background-color:  purple;
     display: flex;
     justify-content: center;
-    border: black 1px solid;
+    
   }
 
   .row{
@@ -40,6 +40,8 @@
     flex-direction: row;
     color: black;
     justify-content: flex-start;
+    border: black 1px solid;
+
   }
   
   .checkoutBtn:hover {
