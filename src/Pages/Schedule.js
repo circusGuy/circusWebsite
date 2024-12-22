@@ -65,7 +65,7 @@ export default function Schedule() {
   });
   return (
     <div class="page">
-      <div class="subPage">{eList}</div>
+      <div class="subPage2">{eList}</div>
     </div>
   );
 }

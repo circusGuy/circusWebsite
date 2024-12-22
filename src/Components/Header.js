@@ -10,7 +10,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
-import { useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import "../CSS/header.css";
 import logo from "../Images/kingdom-of-wonders.png";
@@ -18,6 +18,8 @@ import logo from "../Images/kingdom-of-wonders.png";
 export default function Header() {
   const location = useLocation();
   const [isDrawerOpen, setDrawerOpen] = useState(false);
+  const navigate = useNavigate();
+
 
   const toggleDrawer = (open) => () => {
     setDrawerOpen(open);
@@ -31,11 +33,11 @@ export default function Header() {
             src={logo}
             alt="Kingdom of Wonders Logo"
             className="logo"
-            href="/home"
+            onClick={() => navigate('/')}
           />
 
           {/* Desktop Navigation */}
-          <div className="lollipop-bar">
+          <div className="lollipop-bar border border-white border-opacity-20">
             <Stack direction="row" spacing={11}>
               <Link
                 href="/"
@@ -89,7 +91,7 @@ export default function Header() {
         </div>
       </div>
       <div class="mobile-only">
-        <div class="mobile-header">
+        <div class="mobile-header border-b border-white border-opacity-50">
           <a href="/">
             <img
               src={logo}

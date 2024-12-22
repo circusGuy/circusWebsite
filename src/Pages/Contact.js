@@ -28,21 +28,21 @@ export default function Contact() {
                   <input
                     type="text"
                     name="name"
-                    placeholder=" Full Name"
+                    placeholder="Full Name"
                     autocomplete="off"
                     required
                   />
                   <input
                     type="email"
                     name="email"
-                    placeholder=" Email Address"
+                    placeholder="Email Address"
                     autocomplete="off"
                     required
                   />
                   <input
                     type="text"
                     name="orderNum"
-                    placeholder=" Order Number"
+                    placeholder="Order Number"
                     autocomplete="off"
                     required
                   />
@@ -52,7 +52,7 @@ export default function Contact() {
                     rows="10"
                     cols="60"
                     name="message"
-                    placeholder=" What Can We Help You With?"
+                    placeholder="What Can We Help You With?"
                     autocomplete="off"
                     required
                   />

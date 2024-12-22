@@ -15,11 +15,6 @@ h1{
     font-weight: bold;
 }
 
-.subPage2 {
-  background-color: white;
-  border-radius: 4px;
-}
-
 input::placeholder,
 textarea::placeholder {
   color: black;
@@ -30,7 +25,7 @@ textarea,
 select {
   border: 1.5px rgb(180, 178, 178) solid;
   box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 2px;
+  border-radius: 4px;
   color: black;
 }
 
@@ -52,7 +47,7 @@ select {
 
 input,
 select {
-  padding: 0.5vw;
+  padding: 10px;
   width: 100%;
   margin-bottom: 3vh;
 }
@@ -69,7 +64,7 @@ textarea {
   padding: 0.5vw;
   font-size: 1vw;
   width: 100%;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .submitBtn:hover {
