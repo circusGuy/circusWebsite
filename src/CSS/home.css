@@ -1,0 +1,53 @@
+.homePic{
+    width: 40%;
+}
+
+.homeTitle{
+  color: #efc524;
+  font-size: 33px;
+  margin-bottom: 2vh;
+  width: 100%;
+  text-align: center;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.homeDesc{
+    color: white;
+    font-size: 21px;
+    text-align: center;
+}
+
+.tixBtn{
+    background-color: #EFC524;
+    color: purple;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.tixBtn:hover{
+   padding: 21px;
+   font-size: 21px;
+   background-color: #f3d14a;
+
+}
+
+.purp{
+    background-color: rgba(131, 8, 131, 0.85);
+}
+
+
+@media screen and (max-width: 1200px) {
+    .homePic{
+        width: 100%;
+    }
+
+    .tixBtn{
+       width: 100%;
+       text-align: center;
+    }
+    
+}

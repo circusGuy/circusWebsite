@@ -30,8 +30,17 @@ body {
   align-items: center;
 }
 
+.pad{
+  padding: 3vw;
+}
+
 .subPage2 {
+  background-color: white;
   border-radius: 4px;
+}
+
+.subPage3 {
+  background-color: none;
 }
 
 body::-webkit-scrollbar {

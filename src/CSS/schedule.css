@@ -54,7 +54,6 @@
     color: #efc524;
     font-weight: bold;
     font-size: 1.3vw;
-
     width: 6vw; /* Adjusted for better visibility */
     height: 6vw; /* Makes it square */
     display: flex; /* Flexbox for alignment */

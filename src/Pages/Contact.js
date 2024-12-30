@@ -7,7 +7,7 @@ export default function Contact() {
       <div class="subPage2">
         <div className="section" id="contact">
           <div className="contactme">
-            <form action="https://formspree.io/f/moqgqrgq" method="POST">
+            <form action="https://formspree.io/f/movvlobp" method="POST">
               <div className="text-gradient2 md:text-4xl sm:text-xl mb-3">
                 <h1>Contact Support</h1>
               </div>

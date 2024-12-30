@@ -5,6 +5,7 @@ module.exports = {
       extend: {
         colors: {
           goldenYellow: '#EFC524', // Custom color
+          homePurple: '#482b59',
         },
       },
     },
