@@ -18,7 +18,7 @@
   }
   
   .logo {
-    z-index: 2; /* Ensures the logo appears above the bar */
+    z-index: 3; /* Ensures the logo appears above the bar */
     width: auto;
     max-height: 18vh; /* Adjust the size as needed */
   }
@@ -43,6 +43,8 @@
     color: white;
     font-weight: bold;
     font-size: 1.3vw;
+    text-shadow: 0 5px 6px rgba(0, 0, 0, 0.7)
+
   }
   
   .lollipop-bar a:hover {
