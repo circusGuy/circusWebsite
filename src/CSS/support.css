@@ -73,7 +73,7 @@ textarea {
 }
 
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1200px) {
     .form {
       flex-direction: column; /* Stack the columns vertically */
     }

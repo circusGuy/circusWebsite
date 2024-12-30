@@ -12,9 +12,7 @@ export default function Footer() {
           <div class="footer-content">
             <div>
             <Link href="mailto:umdwebmast3r@gmail.com" underline="none">
-              <strong>
                 © 2025 Leifland Productions, LLC | All Rights Reserved
-              </strong>
             </Link>
             </div>
             <div class="logos">

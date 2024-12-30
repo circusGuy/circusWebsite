@@ -38,7 +38,8 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="lollipop-bar border border-white border-opacity-20">
-            <Stack direction="row" spacing={11}>
+            <Stack direction="row" spacing={39}>
+              <Stack direction='row' spacing={12}>
               <Link
                 href="/"
                 className={`${location.pathname === "/" ? "active" : ""}`}
@@ -60,10 +61,8 @@ export default function Header() {
               >
                 Gallery
               </Link>
-              <p></p>
-              <p></p>
-              <p></p>
-              <p></p>
+              </Stack>
+              <Stack direction="row" spacing={12}>
               <Link
                 href="/concessions"
                 className={`${
@@ -86,6 +85,7 @@ export default function Header() {
               >
                 Contact
               </Link>
+              </Stack>
             </Stack>
           </div>
         </div>

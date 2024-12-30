@@ -19,7 +19,7 @@ function q_a_card(qObject) {
         <div class='mb-2'>
           <strong>Q: {qObject.Q}</strong>
         </div>
-        <Divider className="w-3/5 bg-yellow-300 h-1" />
+        <Divider className="w-3/5 bg-goldenYellow h-1" />
         <div class='mt-2'>
           <strong>A: </strong>
           <em>{qObject.A}</em>

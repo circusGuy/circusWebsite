@@ -10,7 +10,7 @@
 }
 
 .title {
-  color: yellow;
+  color: #efc524;
   background-color: rgba(128, 0, 128, 0.92);
   font-size: 30px;
   margin-bottom: 2vh;
@@ -20,7 +20,7 @@
   padding: 10px;
 }
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1200px) {
   .qaCard {
     width: 100%;
     font-size: 18px;   

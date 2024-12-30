@@ -20,7 +20,7 @@
   .logo {
     z-index: 2; /* Ensures the logo appears above the bar */
     width: auto;
-    max-height: 20vh; /* Adjust the size as needed */
+    max-height: 18vh; /* Adjust the size as needed */
   }
   
   .lollipop-bar {
@@ -47,15 +47,15 @@
   
   .lollipop-bar a:hover {
     text-decoration: underline;
-    text-decoration-color: yellow;
+    text-decoration-color: #efc524;
     text-decoration-thickness: 0.5vh;
     text-underline-offset: 1vh;
   }
 
   .lollipop-bar .active{
-    color: yellow;
+    color: #efc524;
     text-decoration: underline;
-    text-decoration-color: yellow;
+    text-decoration-color: #efc524;
     text-decoration-thickness: 0.5vh;
     text-underline-offset: 1vh;
   }
@@ -86,7 +86,7 @@
   }
 
 
-  @media screen and (max-width: 1450px) {
+  @media screen and (max-width: 1200px) {
     .desktop-only {
       display: none; /* Hide desktop navigation */
     }
