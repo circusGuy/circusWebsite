@@ -1,12 +1,24 @@
 import "../CSS/concessions.css";
 import PageHeader from "../Components/pageHeader";
-import img1 from "../Images/gallery/hey.jpg";
-import img2 from '../Images/gallery/hi.jpg';
+import apple from "../Images/concessions/apple.png";
+import waffle from "../Images/concessions/waffle.png";
+import hotDog from "../Images/concessions/hotDog.png";
+import nachos from "../Images/concessions/nachos.png";
+import popcorn from "../Images/concessions/popcorn.png";
+import cc from "../Images/concessions/cc.png";
+import sno from "../Images/concessions/snoKone.png";
+import soda from "../Images/concessions/soda.png";
+import img2 from "../Images/gallery/hi.jpg";
 
 function foodCard(item, picture, price) {
   return (
     <div className="foodCard">
-      <img src={picture} alt={item} className='concession' />
+      <img
+        src={picture}
+        alt={item}
+        className="concession mb-1"
+        height="200px"
+      />
       <h3>{item}</h3>
       <h3>{price}</h3>
     </div>
@@ -15,22 +27,33 @@ function foodCard(item, picture, price) {
 
 export default function Concessions() {
   return (
-    <div className="page p-4">     
+    <div className="page p-4 concs">
       <PageHeader title="Concessions" />
-      <h1 class='subHeader'>Food/Drink</h1>
-      <div className="foodItems grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {foodCard("Taco", img1, "$12.00")}
-        {foodCard("Burger", img1, "$15.00")}
-        {foodCard("Pizza", img1, "$10.00")}
-        {foodCard("Salad", img1, "$8.00")}
+      <div class="rowFood">
+        <h1 class="subHeader">Food/Drink</h1>
+        <div className="foodItems grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {foodCard("Candy Apple", apple, "$12.00")}
+          {foodCard("Waffle", waffle, "$15.00")}
+          {foodCard("Nachos", nachos, "$10.00")}
+          {foodCard("Hot Dog", hotDog, "$8.00")}
+          {foodCard("Popcorn", popcorn, "$8.00")}
+          {foodCard("Cotton Candy", cc, "$8.00")}
+          {foodCard("Sno-Kone", sno, "$8.00")}
+          {foodCard("Soda/Water", soda, "$3.00/$2.00")}
+        </div>
       </div>
-      <h1 class='subHeader'>Merchandise</h1>
-      <div className="foodItems grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {foodCard("Taco", img2, "$12.00")}
-        {foodCard("Burger", img2, "$15.00")}
-        {foodCard("Pizza", img2, "$10.00")}
-        {foodCard("Salad", img2, "$8.00")}
+      <div class="rowFood">
+        <h1 class="subHeader">Merchandise</h1>
+        <div className="foodItems grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-10">
+          {foodCard("Taco", img2, "$12.00")}
+          {foodCard("Burger", img2, "$15.00")}
+          {foodCard("Pizza", img2, "$10.00")}
+          {foodCard("Salad", img2, "$8.00")}
+        </div>
       </div>
+      <a href="/schedule" class="tixBtn w-1/4 text-center">
+        GET TICKETS!!!
+      </a>
     </div>
   );
 }

@@ -36,8 +36,11 @@ export default function Faq() {
   return (
     <div class="page lg:w-[70%] md:w-full justify-self-center align-center">
       <div class="subPage">
-        <PageHeader title='Frequently Asked Questions'/>
+        <PageHeader title="Frequently Asked Questions" />
         {cards}
+        <a href="/schedule" class="tixBtn w-1/4 text-center">
+          GET TICKETS!!!
+        </a>
       </div>
     </div>
   );

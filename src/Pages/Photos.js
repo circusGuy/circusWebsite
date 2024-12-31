@@ -5,8 +5,9 @@ import PageHeader from '../Components/pageHeader';
 
 export default function Photos() {
   return (
-    <div class="page photos">
+    <div class="page concs">
         <PageHeader title='Gallery'/>
+        <div class='photos mb-10'>
         <img src={img1} alt="circus"></img>
         <img src={img2} alt="circus"></img>
         <img src={img1} alt="circus"></img>
@@ -15,6 +16,11 @@ export default function Photos() {
         <img src={img2} alt="circus"></img>
         <img src={img1} alt="circus"></img>
         <img src={img2} alt="circus"></img>
+        </div>
+        <a href="/schedule" class="tixBtn w-1/4 text-center">
+          GET TICKETS!!!
+        </a>
+        
     </div>
   );
 }
