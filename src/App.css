@@ -54,8 +54,8 @@ body::-webkit-scrollbar {
 
 
 @media screen and (max-width: 1200px) {
-
-  .page{
-    margin-top: 15%;
+  .shader{
+    padding-top: 17%;
   }
+
 }
