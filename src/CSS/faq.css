@@ -1,5 +1,5 @@
 .qaCard {
-  width: 70%;
+  width: 100%;
   font-size: 19px;
   background-color: rgba(128, 0, 128, 0.92);
   color: white;
@@ -16,7 +16,7 @@
   background-color: rgba(128, 0, 128, 0.92);
   font-size: 30px;
   margin-bottom: 2vh;
-  width: 70%;
+  width: 100%;
   text-align: center;
   border-radius: 4px;
   padding: 10px;

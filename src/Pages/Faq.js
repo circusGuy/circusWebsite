@@ -33,7 +33,7 @@ export default function Faq() {
   const cards = questions_answers.map(qa => q_a_card(qa));
 
   return (
-    <div class="page">
+    <div class="page lg:w-[70%] md:w-full justify-self-center align-center">
       <div class="subPage">
         <h1 class='title'>Frequently Asked Questions</h1>
         {cards}

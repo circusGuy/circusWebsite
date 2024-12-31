@@ -1,0 +1,35 @@
+.page img{
+    border-radius: 20px;
+    padding: 4px;
+    background-color: purple;
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.7);
+    width: 30%;
+
+}
+
+
+.photos{
+    display: flex; 
+    flex-wrap: wrap;
+    flex-direction: row;
+    column-gap: 40px;
+    row-gap: 20px;
+    justify-content: center;
+
+}
+.galleryHeader{
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 1200px) {
+    .page img{
+        border-radius: 20px;
+        padding: 4px;
+        background-color: purple;
+        box-shadow: 0 5px 6px rgba(0, 0, 0, 0.7);
+        width: 100%;
+    
+    }
+
+}
