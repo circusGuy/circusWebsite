@@ -69,13 +69,13 @@
 
   .mobile-header{
     background-color: purple;
+    position: fixed;
     width: 100%;
     top: 0;
     display: flex;
     flex-direction: row;
     padding: 5px;
     justify-content: flex-start;
-    position: fixed;
   }
 
   .icon{

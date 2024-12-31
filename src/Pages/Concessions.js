@@ -15,10 +15,7 @@ function foodCard(item, picture, price) {
 
 export default function Concessions() {
   return (
-    <div className="page p-4">
-      <div class='bg'>
-
-     
+    <div className="page p-4">     
       <PageHeader title="Concessions" />
       <h1 class='subHeader'>Food/Drink</h1>
       <div className="foodItems grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -33,7 +30,6 @@ export default function Concessions() {
         {foodCard("Burger", img2, "$15.00")}
         {foodCard("Pizza", img2, "$10.00")}
         {foodCard("Salad", img2, "$8.00")}
-      </div>
       </div>
     </div>
   );

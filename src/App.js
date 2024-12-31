@@ -15,6 +15,7 @@ import Faq from './Pages/Faq'
 function App() {
   return (
     <Router>
+      <div class='shader'>
       <Header/>
       <Routes>
         <Route path="/" element={<Home/>} />
@@ -26,6 +27,8 @@ function App() {
         <Route path="/faq" element={<Faq/>} />
       </Routes>
       <Footer/>
+      </div>
+      
     </Router>
   );
 }
