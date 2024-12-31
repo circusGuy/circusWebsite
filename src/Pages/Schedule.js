@@ -62,7 +62,7 @@ export default function Schedule() {
   // });
   return (
     <div class="page">
-      <iframe src="http://purchase-tickets-forthe-kingdom-of-wonders.square.site/" width='100%' height="1000px" title="Checkout"></iframe>
+      <iframe src="https://purchase-tickets-forthe-kingdom-of-wonders.square.site/" width='100%' height="1000px" title="Checkout"></iframe>
 
     </div>
   );
