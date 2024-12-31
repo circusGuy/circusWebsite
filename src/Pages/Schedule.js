@@ -2,6 +2,7 @@ import getEvents from "../API";
 import { useState } from "react";
 import "../CSS/schedule.css";
 import { Stack } from "@mui/material";
+import PageHeader from "../Components/pageHeader";
 
 
 function eventCard(event) {
@@ -65,6 +66,7 @@ export default function Schedule() {
   });
   return (
     <div class="page">
+      <PageHeader title='Schedule'/>
       <div class="subPage3">{eList}</div>
     </div>
   );

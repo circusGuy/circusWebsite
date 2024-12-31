@@ -1,5 +1,6 @@
 import { Divider, Stack } from "@mui/material";
 import "../CSS/faq.css";
+import PageHeader from "../Components/pageHeader";
 
 const questions_answers = [
   {
@@ -16,11 +17,11 @@ function q_a_card(qObject) {
   return (
     <div class="qaCard">
       <Stack direction="column">
-        <div class='mb-2'>
+        <div class="mb-2">
           <strong>Q: {qObject.Q}</strong>
         </div>
         <Divider className="w-3/5 bg-goldenYellow h-1" />
-        <div class='mt-2'>
+        <div class="mt-2">
           <strong>A: </strong>
           <em>{qObject.A}</em>
         </div>
@@ -30,12 +31,12 @@ function q_a_card(qObject) {
 }
 
 export default function Faq() {
-  const cards = questions_answers.map(qa => q_a_card(qa));
+  const cards = questions_answers.map((qa) => q_a_card(qa));
 
   return (
     <div class="page lg:w-[70%] md:w-full justify-self-center align-center">
       <div class="subPage">
-        <h1 class='title'>Frequently Asked Questions</h1>
+        <PageHeader title='Frequently Asked Questions'/>
         {cards}
       </div>
     </div>

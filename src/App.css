@@ -47,5 +47,9 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1200px) {
+
+  .page{
+    margin-top: 15%;
+  }
 }
