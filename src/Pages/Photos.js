@@ -17,7 +17,7 @@ export default function Photos() {
         <img src={img1} alt="circus"></img>
         <img src={img2} alt="circus"></img>
         </div>
-        <a href="/schedule" class="tixBtn w-1/4 text-center">
+        <a href="https://purchase-tickets-forthe-kingdom-of-wonders.square.site/" target="_self" class="tixBtn w-1/4 text-center" >
           GET TICKETS!!!
         </a>
         

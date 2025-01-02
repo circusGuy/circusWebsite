@@ -38,7 +38,7 @@ export default function Faq() {
       <div class="subPage">
         <PageHeader title="Frequently Asked Questions" />
         {cards}
-        <a href="/schedule" class="tixBtn w-1/4 text-center">
+        <a href="https://purchase-tickets-forthe-kingdom-of-wonders.square.site/" target="_self" class="tixBtn w-1/4 text-center" >
           GET TICKETS!!!
         </a>
       </div>

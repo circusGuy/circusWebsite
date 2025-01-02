@@ -51,9 +51,9 @@ export default function Concessions() {
           {foodCard("Salad", img2, "$8.00")}
         </div>
       </div>
-      <a href="/schedule" class="tixBtn w-1/4 text-center">
-        GET TICKETS!!!
-      </a>
+      <a href="https://purchase-tickets-forthe-kingdom-of-wonders.square.site/" target="_self" class="tixBtn w-1/4 text-center" >
+          GET TICKETS!!!
+        </a>
     </div>
   );
 }

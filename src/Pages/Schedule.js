@@ -1,28 +1,13 @@
 // import getEvents from "../API";
 // import { useState } from "react";
+import { Divider, Stack } from "@mui/material";
 import "../CSS/schedule.css";
-// import { Stack } from "@mui/material";
+import PageHeader from "../Components/pageHeader";
 
-// function eventCard(event) {
-//   const [date, timeWithZone] = event.date.split("T");
-//   let time = timeWithZone.replace("Z", "");
-
-//   const [hours, minutes] = time.split(":");
-//   const period = +hours >= 12 ? "PM" : "AM";
-//   const hours12 = +hours % 12 || 12;
-//   time = `${hours12}:${minutes} ${period}`;
-
-//   const dateStr = new Date(date);
-
-//   const options = { month: "short", day: "numeric" };
-//   const formattedDate = dateStr.toLocaleDateString("en-US", options);
-
-//   const [month, day] = formattedDate.split(" ");
-
+// function eventCard(date, times, location) {
 //   return (
 //     <div>
 //       <div>
-       
 //         <div class='locHeader'><h1>{event.city}, {event.state}</h1></div>
 //         <Stack direction="row" class="row" >
 //           <Stack class="dateBox">
@@ -44,7 +29,7 @@ import "../CSS/schedule.css";
 //           </a></Stack>
 //         </Stack>
 //       </div>
-      
+
 //     </div>
 //   );
 // }
@@ -61,9 +46,46 @@ export default function Schedule() {
   //   return eventCard(e);
   // });
   return (
-    <div class="page">
-      <iframe src="https://purchase-tickets-forthe-kingdom-of-wonders.square.site/" width='100%' height="1000px" title="Checkout"></iframe>
+    <div class="page concs">
+      <PageHeader title="Upcoming Events" />
 
+      <div class="subPage mb-20">
+        <Stack direction="row" spacing={40}>
+          <div class='eventBox'>
+            <div class="dateBox">
+              <div>February</div>
+              <div>6th-7th</div>
+            </div>
+            Washington, DC
+          </div>
+
+          <div class="dateBox">
+            <div>February</div>
+            <div>7th</div>
+          </div>
+          <div class="dateBox">
+            <div>February</div>
+            <div>8th</div>
+          </div>
+        </Stack>
+      </div>
+
+      <a
+        href="https://purchase-tickets-forthe-kingdom-of-wonders.square.site/"
+        target="_self"
+        class="tixBtn w-1/4 text-center"
+      >
+        GET TICKETS!!!
+      </a>
+
+      <div class="disclaimer mt-8">
+        <em class="text-white">
+          All Sales are Final. In Making a Purchase, Users are agreeing to our{" "}
+          <a href="youtube.com" class="link">
+            Terms and Conditions
+          </a>
+        </em>
+      </div>
     </div>
   );
 }
