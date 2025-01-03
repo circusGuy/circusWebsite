@@ -17,8 +17,10 @@ body {
   background-size: cover;
 }
 
-.shader{
-  background-color: rgba(0,0,0,0.7);
+.shader {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-bottom: 15vh;
+
 }
 
 .page {
@@ -35,7 +37,9 @@ body {
   align-items: center;
 }
 
-.pad{
+
+
+.pad {
   padding: 3vw;
 }
 
@@ -52,10 +56,8 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-
 @media screen and (max-width: 1200px) {
-  .shader{
+  .shader {
     padding-top: 17%;
   }
-
 }

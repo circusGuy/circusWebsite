@@ -1,4 +1,4 @@
-.disclaimer{ 
+.disclaimer {
   width: 100%;
   background-color: purple;
   text-align: center;
@@ -7,53 +7,49 @@
   font-size: 18px;
 }
 
-.link{
+.link {
   color: #efc524;
   text-decoration: underline;
 }
 
-  .locHeader{
-    color: #efc524;
-    font-size: 1.5vw;
-    font-weight: bold;
-    width: 100%;
-    background-color:  purple;
-    display: flex;
-    justify-content: center;
-    
-  }
+.locHeader {
+  color: #efc524;
+  font-size: 1.5vw;
+  font-weight: bold;
+  width: 100%;
+  background-color: purple;
+  display: flex;
+  justify-content: center;
+}
 
-  .eventBox{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    align-content: center;
-    background-color: rgba(128, 0, 128, 0.7);
-    border-radius: 4px;
-    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.7);
+.eventBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  background-color: rgba(128, 0, 128, 0.7);
+  border-radius: 4px;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.7);
+}
+
+.dateBox {
+  background-image: url('../Images/locations/DC.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  /* background-color: #efc524; */
+  border-radius: 4px;
+  color: purple;
+  font-weight: bold;
+  font-size: 1.2vw;
+  width: 100%; /* Adjusted for better visibility */
+  display: flex; /* Flexbox for alignment */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  text-align: center;
+}
 
 
-  }
-  
-
-
-  .dateBox {
-    background-color: #efc524;
-    border-radius: 4px;
-    color: purple;
-    font-weight: bold;
-    font-size: 1.2vw;
-    width: 9vw; /* Adjusted for better visibility */
-    height: 9vw; /* Makes it square */
-    display: flex; /* Flexbox for alignment */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center content horizontally */
-    justify-content: center; /* Center content vertically */
-    text-align: center;
-  }
-  
- 
-
-  
