@@ -17,11 +17,16 @@ export default function Home() {
             dragon but with the help of a valiant knight and a brave audience,
             the generous and kind Queen shall rule again!
           </p>
-          <a
+          {/* <a
             href="https://purchase-tickets-forthe-kingdom-of-wonders.square.site/"
             target="_self"
             class="tixBtn"
-          >
+          > */}
+             <a
+        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        target="_self"
+        class="tixBtn w-1/4 text-center"
+      >
             GET TICKETS!!!
           </a>
         </div>

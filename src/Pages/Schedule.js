@@ -71,8 +71,13 @@ export default function Schedule() {
         </Stack>
       </div>
 
-      <a
-        href="https://purchase-tickets-forthe-kingdom-of-wonders.square.site/"
+      {/* <a
+        href="https://purchase-tickets-forthe-kingdom-of-wonders.square.site/ "
+        target="_self"
+        class="tixBtn w-1/4 text-center"
+      > */}
+         <a
+        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         target="_self"
         class="tixBtn w-1/4 text-center"
       >
