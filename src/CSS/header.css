@@ -1,6 +1,5 @@
 
   .navbar{
-    
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -9,13 +8,6 @@
     align-self: center;
     justify-self: center;
   }
-  
-
-  .drawer-list{
-
-  }
-  
-
   
   .header-container {
     position: fixed;
@@ -26,9 +18,9 @@
   }
   
   .logo {
-    z-index: 99; /* Ensures the logo appears above the bar */
+    z-index: 99;
     width: auto;
-    max-height: 18vh; /* Adjust the size as needed */
+    max-height: 18vh;
   }
   
   .lollipop-bar {

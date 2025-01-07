@@ -1,5 +1,4 @@
 import "../CSS/concessions.css";
-import PageHeader from "../Components/pageHeader";
 import apple from "../Images/concessions/apple.png";
 import waffle from "../Images/concessions/waffle.png";
 import hotDog from "../Images/concessions/hotDog.png";
@@ -8,7 +7,6 @@ import popcorn from "../Images/concessions/popcorn.png";
 import cc from "../Images/concessions/cc.png";
 import sno from "../Images/concessions/snoKone.png";
 import soda from "../Images/concessions/soda.png";
-import img2 from "../Images/gallery/hi.jpg";
 
 function foodCard(item, picture, price) {
   return (
@@ -28,7 +26,7 @@ function foodCard(item, picture, price) {
 export default function Concessions() {
   return (
     <div className="page p-4 concs">
-      <PageHeader title="Concessions" />
+      <h1 class="title">Concessions</h1>
       <div class="rowFood">
         <h1 class="subHeader">Food/Drink</h1>
         <div className="foodItems grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -45,10 +43,10 @@ export default function Concessions() {
       <div class="rowFood">
         <h1 class="subHeader">Merchandise</h1>
         <div className="foodItems grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-10">
-          {foodCard("Taco", img2, "$12.00")}
-          {foodCard("Burger", img2, "$15.00")}
-          {foodCard("Pizza", img2, "$10.00")}
-          {foodCard("Salad", img2, "$8.00")}
+          {foodCard("Taco", soda, "$12.00")}
+          {foodCard("Burger", soda, "$15.00")}
+          {foodCard("Pizza", soda, "$10.00")}
+          {foodCard("Salad", soda, "$8.00")}
         </div>
       </div>
       {/* <a href="https://purchase-tickets-forthe-kingdom-of-wonders.square.site/" target="_self" class="tixBtn w-1/4 text-center" > */}

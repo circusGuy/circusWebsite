@@ -1,11 +1,11 @@
 import homePic from "../Images/homePic.png";
 import "../CSS/home.css";
-import PageHeader from "../Components/pageHeader";
+
 
 export default function Home() {
   return (
       <div class="page">
-        <PageHeader title="Welcome to the Kingdom of Wonders" />
+        <h1 class='title'>Welcome to the Kingdom of Wonders</h1>
         
         <div class="subPage mb-5">
           <img src={homePic} alt="Kingdom Of Wonders Circus" class="homePic" />

@@ -1,5 +1,4 @@
 import {
-  Link,
   Stack,
   Drawer,
   IconButton,
@@ -10,8 +9,6 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
-
-
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import "../CSS/header.css";
@@ -19,9 +16,9 @@ import logo from "../Images/kingdom-of-wonders.png";
 
 export default function Header() {
   const location = useLocation();
+  const path = location.pathname;
   const [isDrawerOpen, setDrawerOpen] = useState(false);
   const navigate = useNavigate();
-
 
   const toggleDrawer = (open) => () => {
     setDrawerOpen(open);
@@ -35,58 +32,46 @@ export default function Header() {
             src={logo}
             alt="Kingdom of Wonders Logo"
             className="logo"
-            onClick={() => navigate('/')}
+            onClick={() => navigate("/")}
           />
 
           {/* Desktop Navigation */}
           <div className="lollipop-bar border border-white border-opacity-20">
             <Stack direction="row" spacing={39}>
-              <Stack direction='row' spacing={12}>
-              <Link
-                href="/"
-                className={`${location.pathname === "/" ? "active" : ""}`}
-              >
-                Home
-              </Link>
-              <Link
-                href="/schedule"
-                className={`${
-                  location.pathname === "/schedule" ? "active" : ""
-                }`}
-              >
-                Schedule
-              </Link>
-              
-              <Link
-                href="/photos"
-                className={`${location.pathname === "/photos" ? "active" : ""}`}
-              >
-                Gallery
-              </Link>
+              <Stack direction="row" spacing={12}>
+                <a href="/" class={`${path === "/" ? "active" : ""}`}>
+                  Home
+                </a>
+                <a
+                  href="/schedule"
+                  class={`${path === "/schedule" ? "active" : ""}`}
+                >
+                  Schedule
+                </a>
+
+                <a
+                  href="/photos"
+                  class={`${path === "/photos" ? "active" : ""}`}
+                >
+                  Gallery
+                </a>
               </Stack>
               <Stack direction="row" spacing={12}>
-              <Link
-                href="/concessions"
-                className={`${
-                  location.pathname === "/concessions" ? "active" : ""
-                }`}
-              >
-                Concessions
-              </Link>
-              <Link
-                href="/faq"
-                className={`${location.pathname === "/faq" ? "active" : ""}`}
-              >
-                FAQ
-              </Link>
-              <Link
-                href="/contact"
-                className={`${
-                  location.pathname === "/contact" ? "active" : ""
-                }`}
-              >
-                Contact
-              </Link>
+                <a
+                  href="/concessions"
+                  class={`${path === "/concessions" ? "active" : ""}`}
+                >
+                  Concessions
+                </a>
+                <a href="/faq" class={`${path === "/faq" ? "active" : ""}`}>
+                  FAQ
+                </a>
+                <a
+                  href="/contact"
+                  class={`${path === "/contact" ? "active" : ""}`}
+                >
+                  Contact
+                </a>
               </Stack>
             </Stack>
           </div>
@@ -123,8 +108,8 @@ export default function Header() {
             sx: {
               backgroundColor: "purple",
               color: "#efc524",
-              textShadow: "0 5px 6px rgba(0, 0, 0, 0.7)"
-            }
+              textShadow: "0 5px 6px rgba(0, 0, 0, 0.7)",
+            },
           }}
         >
           <div className="drawer-header mt-3">

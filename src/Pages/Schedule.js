@@ -1,11 +1,10 @@
 import "../CSS/schedule.css";
-import PageHeader from "../Components/pageHeader";
 import toc from "../Images/KoW Terms and Conditions page.pdf";
 
 export default function Schedule() {
   return (
     <div class="page concs">W
-      <PageHeader title="Upcoming Events" />
+      <h1 class='title'>Upcoming Events</h1>
 
         <div class='eventCard'>
           <h1>Macclenny, Florida</h1>
