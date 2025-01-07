@@ -119,6 +119,13 @@ export default function Header() {
           anchor="right"
           open={isDrawerOpen}
           onClose={toggleDrawer(false)}
+          PaperProps={{
+            sx: {
+              backgroundColor: "purple",
+              color: "#efc524",
+              textShadow: "0 5px 6px rgba(0, 0, 0, 0.7)"
+            }
+          }}
         >
           <div className="drawer-header mt-3">
             <IconButton

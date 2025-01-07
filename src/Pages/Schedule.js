@@ -1,75 +1,21 @@
-// import getEvents from "../API";
-// import { useState } from "react";
-import { Stack } from "@mui/material";
 import "../CSS/schedule.css";
 import PageHeader from "../Components/pageHeader";
-
-
-// function eventCard(date, times, location) {
-//   return (
-//     <div>
-//       <div>
-//         <div class='locHeader'><h1>{event.city}, {event.state}</h1></div>
-//         <Stack direction="row" class="row" >
-//           <Stack class="dateBox">
-//             <div>{month}</div>
-//             <div>{day}</div>
-//           </Stack>
-//           <Stack direction="column" spacing={2} className='mt-3'>
-//             <div>
-//               <strong>Location:</strong> {event.location}
-//             </div>
-//             <div>
-//               <strong>Ticket Price:</strong> $20.00 - $25.00
-//             </div>
-//           </Stack>
-//           <Stack spacing={4} direction='row' className='checkoutGroup'><a href={`/checkout?id=${event.id}`} class="checkoutBtn">
-//             {time}
-//           </a><a href={`/checkout?id=${event.id}`} class="checkoutBtn">
-//             {time}
-//           </a></Stack>
-//         </Stack>
-//       </div>
-
-//     </div>
-//   );
-// }
+import toc from "../Images/KoW Terms and Conditions page.pdf";
 
 export default function Schedule() {
-  // const [eventList, setEventList] = useState([]);
-
-  // (async () => {
-  //   const events = await getEvents();
-  //   setEventList(events);
-  // })();
-
-  // const eList = eventList.map((e) => {
-  //   return eventCard(e);
-  // });
   return (
-    <div class="page concs">
+    <div class="page concs">W
       <PageHeader title="Upcoming Events" />
 
-      <div class="subPage mb-20">
-        <Stack direction="row" spacing={40}>
-          <div class='eventBox'>
-            <div class="dateBox">
-              <div>February</div>
-              <div>6th-7th</div>
-            </div>
-            Washington, DC
-          </div>
-
-          <div class="dateBox">
-            <div>February</div>
-            <div>7th</div>
-          </div>
-          <div class="dateBox">
-            <div>February</div>
-            <div>8th</div>
-          </div>
-        </Stack>
-      </div>
+        <div class='eventCard'>
+          <h1>Macclenny, Florida</h1>
+          <p>February 19th - February 21st</p>
+        </div>
+        <div class='eventCard'>
+          <h1>Ashburn, Georgia</h1>
+          <p>February 28th - March 1st</p>
+        </div>
+       
 
       {/* <a
         href="https://purchase-tickets-forthe-kingdom-of-wonders.square.site/ "
@@ -79,7 +25,7 @@ export default function Schedule() {
          <a
         href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         target="_self"
-        class="tixBtn w-1/4 text-center"
+        class="tixBtn w-1/4 text-center mt-5"
       >
         GET TICKETS!!!
       </a>
@@ -87,7 +33,7 @@ export default function Schedule() {
       <div class="disclaimer mt-8">
         <em class="text-white">
           All Sales are Final. In Making a Purchase, Users are agreeing to our{" "}
-          <a href="youtube.com" class="link">
+          <a href={toc} class="link" target="_blank" rel="noopener noreferrer">
             Terms and Conditions
           </a>
         </em>

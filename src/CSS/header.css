@@ -10,6 +10,13 @@
     justify-self: center;
   }
   
+
+  .drawer-list{
+
+  }
+  
+
+  
   .header-container {
     position: fixed;
     display: flex;
@@ -19,7 +26,7 @@
   }
   
   .logo {
-    z-index: 3; /* Ensures the logo appears above the bar */
+    z-index: 99; /* Ensures the logo appears above the bar */
     width: auto;
     max-height: 18vh; /* Adjust the size as needed */
   }
@@ -89,9 +96,6 @@
     color:white;
 
   }
-
-
-
 
   @media screen and (max-width: 1200px) {
     .desktop-only {

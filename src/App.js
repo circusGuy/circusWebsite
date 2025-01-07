@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route ,Navigate } from "react-router-dom";
 
 import "./App.css";
 import Header from "./Components/Header";
@@ -10,6 +10,9 @@ import Schedule from "./Pages/Schedule";
 import Footer from "./Components/Footer";
 import Concessions from "./Pages/Concessions";
 import Faq from "./Pages/Faq";
+
+
+
 
 function App() {
   return (
@@ -24,6 +27,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/concessions" element={<Concessions />} />
             <Route path="/faq" element={<Faq />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
       </div>
       <Footer />
