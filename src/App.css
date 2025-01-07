@@ -19,8 +19,6 @@ body {
 
 .shader {
   background-color: rgba(0, 0, 0, 0.7);
-  padding-bottom: 15vh;
-
 }
 
 .page {
@@ -37,8 +35,6 @@ body {
   align-items: center;
 }
 
-
-
 .pad {
   padding: 3vw;
 }
@@ -46,10 +42,6 @@ body {
 .subPage2 {
   background-color: white;
   border-radius: 4px;
-}
-
-.subPage3 {
-  background-color: none;
 }
 
 body::-webkit-scrollbar {

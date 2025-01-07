@@ -1,6 +1,6 @@
 // import getEvents from "../API";
 // import { useState } from "react";
-import { Divider, Stack } from "@mui/material";
+import { Stack } from "@mui/material";
 import "../CSS/schedule.css";
 import PageHeader from "../Components/pageHeader";
 
