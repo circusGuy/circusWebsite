@@ -16,7 +16,7 @@ import Faq from "./Pages/Faq";
 
 export default function App() {
   return (
-    <Router class="shader">
+    <Router>
       <div class="shader">
         <Header />
         <Routes>

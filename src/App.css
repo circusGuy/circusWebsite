@@ -1,16 +1,6 @@
-.App {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+/* Background & Display Settings */
 body {
   background-color: purple;
-}
-
-body {
-  z-index: 100;
   background-image: url("./Images/bg.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -19,6 +9,27 @@ body {
 
 .shader {
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* ****************** */
+
+.titleText {
+  color: #efc524;
+  font-size: 32px;
+  text-shadow: 0 5px 6px rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+}
+
+.purp {
+  background-color: rgba(131, 8, 131, 0.85);
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+  border-radius: 5px;
 }
 
 .page {
@@ -33,6 +44,7 @@ body {
   justify-content: center;
   align-content: center;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .pad {
@@ -44,32 +56,8 @@ body {
   border-radius: 4px;
 }
 
-body::-webkit-scrollbar {
-  display: none;
-}
-
-.title {
-  color: #efc524;
-  background-color: rgba(128, 0, 128, 0.92);
-  font-size: 30px;
-  margin-bottom: 2vh;
-  width: 100%;
-  text-align: center;
-  border-radius: 4px;
-  padding: 10px;
-  text-shadow: 0 5px 6px rgba(0, 0, 0, 0.7);
-  font-weight: bold;
-
-}
-
 @media screen and (max-width: 1200px) {
   .shader {
     padding-top: 17%;
-  }
-
-  .title {
-    font-size: 27px;
-    margin-bottom: 2vh;
-    width: 100%;
   }
 }

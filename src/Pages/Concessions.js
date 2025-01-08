@@ -5,58 +5,49 @@ import hotDog from "../Images/concessions/hotDog.png";
 import nachos from "../Images/concessions/nachos.png";
 import popcorn from "../Images/concessions/popcorn.png";
 import cc from "../Images/concessions/cc.png";
-import sno from "../Images/concessions/snoKone.png";
-import soda from "../Images/concessions/soda.png";
-
-function foodCard(item, picture, price) {
-  return (
-    <div className="foodCard">
-      <img
-        src={picture}
-        alt={item}
-        className="concession mb-1"
-        height="200px"
-      />
-      <h3>{item}</h3>
-      <h3>{price}</h3>
-    </div>
-  );
-}
 
 export default function Concessions() {
   return (
     <div className="page p-4 concs">
-      <h1 class="title">Concessions</h1>
+      <h1 class="titleText purp">Concessions</h1>
+
       <div class="rowFood">
-        <h1 class="subHeader">Food/Drink</h1>
-        <div className="foodItems grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {foodCard("Candy Apple", apple, "$12.00")}
-          {foodCard("Waffle", waffle, "$15.00")}
-          {foodCard("Nachos", nachos, "$10.00")}
-          {foodCard("Hot Dog", hotDog, "$8.00")}
-          {foodCard("Popcorn", popcorn, "$8.00")}
-          {foodCard("Cotton Candy", cc, "$8.00")}
-          {foodCard("Sno-Kone", sno, "$8.00")}
-          {foodCard("Soda/Water", soda, "$3.00/$2.00")}
+        <p class="foodDesc">
+          <h1 class="titleFood">Food/Drink</h1>A variety of snacks and drinks
+          are available for purchase before and during the show. Options
+          include: Candy Apples, Waffles, Nachos, Hot Dogs, Popcorn, Cotton
+          Candy, Sno-kones, Soda, Water, and more! <br></br>
+          <br></br>
+          <em> Cash and Credit accepted on site.</em>
+        </p>
+        <div className="foodGallery">
+          <img src={apple} alt="Candy Apple" />
+          <img src={waffle} alt="Waffle" />
+          <img src={nachos} alt="Nachos" />
+          <img src={hotDog} alt="Hot Dog" />
+          <img src={popcorn} alt="Popcorn" />
+          <img src={cc} alt="Cotton Candy" />
         </div>
       </div>
       <div class="rowFood">
-        <h1 class="subHeader">Merchandise</h1>
-        <div className="foodItems grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-10">
-          {foodCard("Taco", soda, "$12.00")}
-          {foodCard("Burger", soda, "$15.00")}
-          {foodCard("Pizza", soda, "$10.00")}
-          {foodCard("Salad", soda, "$8.00")}
+        <p class="foodDesc">
+          <h1 class="titleFood">Merchandise</h1>A variety of toys and keepsakes
+          are available for purchase before and during the show.<br></br>
+          <br></br>
+          <em> Cash and Credit accepted on site.</em>
+        </p>
+        <div className="foodGallery">
+          <img src={apple} alt="Candy Apple" />
+          <img src={waffle} alt="Waffle" />
+          <img src={nachos} alt="Nachos" />
+          <img src={hotDog} alt="Hot Dog" />
+          <img src={popcorn} alt="Popcorn" />
+          <img src={cc} alt="Cotton Candy" />
         </div>
       </div>
-      {/* <a href="https://purchase-tickets-forthe-kingdom-of-wonders.square.site/" target="_self" class="tixBtn w-1/4 text-center" > */}
-      <a
-        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        target="_self"
-        class="tixBtn w-1/4 text-center"
-      >
-          GET TICKETS!!!
-        </a>
+      <a href="/schedule" target="_self" class="tixBtn w-1/4 text-center">
+        SEE THE SCHEDULE!!!
+      </a>
     </div>
   );
 }

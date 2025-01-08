@@ -2,24 +2,12 @@
     width: 40%;
 }
 
-.homeTitle{
-  color: #efc524;
-  font-size: 33px;
-  margin-bottom: 2vh;
-  width: 100%;
-  text-align: center;
-  border-radius: 4px;
-  padding: 10px;
-  text-shadow: 0 5px 6px rgba(0, 0, 0, 0.7)
-
-}
-
 .homeDesc{
     color: white;
     font-size: 21px;
     text-align: center;
-    text-shadow: 0 5px 6px rgba(0, 0, 0, 0.7)
-
+    text-shadow: 0 5px 6px rgba(0, 0, 0, 0.7);
+    margin-bottom: 30px;
 }
 
 .tixBtn{
@@ -30,22 +18,16 @@
     padding: 20px;
     border-radius: 10px;
     cursor: pointer;
+    width:27%;
+    text-align: center;
     border: rgba(0,0,0, 0.5) 1px solid;
     box-shadow: 0 5px 6px rgba(0, 0, 0, 0.7);
     text-shadow: 0 5px 6px rgba(0, 0, 0, 0.4)
-
 }
 
 .tixBtn:hover{
    background-color: rgb(196, 43, 196);
-   color:#f3d14a
-
-
-}
-
-.purp{
-    background-color: rgba(131, 8, 131, 0.85);
-    z-index: -2;
+   color:#f3d14a;
 }
 
 

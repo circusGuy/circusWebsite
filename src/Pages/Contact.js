@@ -8,7 +8,7 @@ export default function Contact() {
         <div className="section" id="contact">
           <div className="contactme">
             <form action="https://formspree.io/f/movvlobp" method="POST">
-              <div className="text-gradient2 md:text-4xl sm:text-xl mb-3">
+              <div className="md:text-4xl sm:text-xl mb-3">
                 <h1>Contact Support</h1>
               </div>
               <Divider class="mb-6" />

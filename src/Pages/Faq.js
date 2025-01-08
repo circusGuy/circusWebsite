@@ -35,16 +35,11 @@ export default function Faq() {
   return (
     <div class="page lg:w-[70%] md:w-full justify-self-center align-center">
       <div class="subPage">
-        <h1 class="title">Frequently Asked Questions</h1>
+        <h1 class="titleText purp">Frequently Asked Questions</h1>
 
         {cards}
-        {/* <a href="https://purchase-tickets-forthe-kingdom-of-wonders.square.site/" target="_self" class="tixBtn w-1/4 text-center" > */}
-        <a
-          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-          target="_self"
-          class="tixBtn w-1/4 text-center"
-        >
-          GET TICKETS!!!
+        <a href="/schedule" target="_self" class="tixBtn w-1/3 text-center">
+          SEE THE SCHEDULE!!!
         </a>
       </div>
     </div>

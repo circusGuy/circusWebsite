@@ -1,108 +1,101 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%;
+  align-self: center;
+  justify-self: center;
+}
 
-  .navbar{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding-top: 5%;
-    align-self: center;
-    justify-self: center;
-  }
-  
-  .header-container {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-  
-  .logo {
-    z-index: 99;
-    width: auto;
-    max-height: 18vh;
-  }
-  
-  .lollipop-bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: fixed;
-    width: 90%; 
-    padding-top:1.2%;
-    padding-bottom:1.2%;
-    background-color: purple;
-    z-index: 1;
-    border-radius: 4px;
+.header-container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 
+.logo {
+  z-index: 99;
+  width: auto;
+  max-height: 18vh;
+}
 
-    
-  }
+.lollipop-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  width: 90%;
+  padding-top: 1.2%;
+  padding-bottom: 1.2%;
+  background-color: purple;
+  z-index: 1;
+  border-radius: 4px;
+}
 
-  .lollipop-bar a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 1.3vw;
-    text-shadow: 0 5px 6px rgba(0, 0, 0, 0.7)
+.lollipop-bar a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3vw;
+  text-shadow: 0 5px 6px rgba(0, 0, 0, 0.7);
+}
 
-  }
-  
-  .lollipop-bar a:hover {
-    text-decoration: underline;
-    text-decoration-color: #efc524;
-    text-decoration-thickness: 0.5vh;
-    text-underline-offset: 1vh;
-  }
+.lollipop-bar a:hover {
+  text-decoration: underline;
+  text-decoration-color: #efc524;
+  text-decoration-thickness: 0.5vh;
+  text-underline-offset: 1vh;
+}
 
-  .lollipop-bar .active{
-    color: #efc524;
-    text-decoration: underline;
-    text-decoration-color: #efc524;
-    text-decoration-thickness: 0.5vh;
-    text-underline-offset: 1vh;
-  }
-  
-  .mobile-only {
+.lollipop-bar .active {
+  color: #efc524;
+  text-decoration: underline;
+  text-decoration-color: #efc524;
+  text-decoration-thickness: 0.5vh;
+  text-underline-offset: 1vh;
+}
+
+.mobile-only {
+  display: none;
+  z-index: 100;
+}
+
+.mobile-header {
+  background-color: purple;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  justify-content: flex-start;
+}
+
+.icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: 2vw;
+  color: white;
+}
+
+@media screen and (max-width: 1200px) {
+  .desktop-only {
     display: none;
-    z-index: 100;
   }
 
-  .mobile-header{
-    background-color: purple;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    display: flex;
-    flex-direction: row;
-    padding: 5px;
-    justify-content: flex-start;
+  .mobile-only {
+    display: block;
   }
 
-  .icon{
-    display: flex; /* Enable flexbox for the group */
-    flex-direction: row; /* Align items horizontally */
-    justify-content: flex-end; /* Align items in the group to the right */
-    margin-left: auto; /* Push the .checkoutGroup to the right */
-    margin-right: 2vw;
-    color:white;
-
+  .drawer-list {
+    width: 250px;
   }
-
-  @media screen and (max-width: 1200px) {
-    .desktop-only {
-      display: none; /* Hide desktop navigation */
-    }
-  
-    .mobile-only {
-      display: block; /* Show hamburger menu */
-    }
-  
-    .drawer-list {
-      width: 250px; /* Set the width of the drawer */
-    }
-    .logo{
-      max-height: 7vh; /* Adjust the size as needed */
-
-    }
+  .logo {
+    max-height: 7vh;
   }
+}
