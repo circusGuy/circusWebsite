@@ -1,4 +1,4 @@
-import homePic from "../Images/homePic.png";
+import homePic from "../Images/homePic2.png";
 import "../CSS/home.css";
 
 export default function Home() {

@@ -19,42 +19,39 @@
   text-shadow: 0 5px 6px rgba(0, 0, 0, 0.7);
 }
 
-.eventCard h1{
+.eventCard h1 {
   color: #efc524;
   font-size: 28px;
   font-weight: bold;
 }
 
-.eventCard p{
+.eventCard p {
   color: white;
   font-size: 24px;
   font-weight: bold;
-
 }
 
-
-
-.eventCard:nth-of-type(odd){
-  background-image: url('../Images/eventBg.png');
+.eventCard:nth-of-type(odd) {
+  background-image: url("../Images/eventBg.png");
   background-size: contain;
-
-
 }
 
-.eventCard:nth-of-type(even){
-  background-image: url('../Images/eventBg2.png');
+.eventCard:nth-of-type(even) {
+  background-image: url("../Images/eventBg2.png");
   background-size: cover;
-
 }
 .eventCard:nth-of-type(odd):hover {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('../Images/eventBg.png');
-
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1)
+    ),
+    url("../Images/eventBg.png");
 }
 
 .eventCard:nth-of-type(even):hover {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('../Images/eventBg2.png');
-
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1)
+    ),
+    url("../Images/eventBg2.png");
 }
-
-
-

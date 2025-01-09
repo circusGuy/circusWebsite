@@ -1,12 +1,32 @@
 import "../CSS/schedule.css";
 import toc from "../Images/KoW Terms and Conditions page.pdf";
+import { FaMapMarkerAlt } from "react-icons/fa";
 
 function EventCard(link, location, dateRange) {
   return (
     <div class="eventCard">
-      <a href={link}>
+      <a
+        href={link}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
         <h1>{location}</h1>
         <p>{dateRange}</p>
+        <p
+          style={{
+            display: "flex",
+            alignItems: "center",
+            color: "grey",
+            fontSize: "15px",
+            marginTop:'5px'
+          }}
+        >
+          <FaMapMarkerAlt style={{ marginRight: "5px" }} />
+          11 South Blvd E #1016 Macclenny, FL, 32063
+        </p>
       </a>
     </div>
   );
@@ -27,7 +47,11 @@ export default function Schedule() {
         "February 28th - March 1st"
       )}
 
-      <a href="https://purchase-tickets-forthe-kingdom-of-wonders.square.site/" target="_self" class="tixBtn w-1/4 text-center">
+      <a
+        href="https://purchase-tickets-forthe-kingdom-of-wonders.square.site/"
+        target="_self"
+        class="tixBtn w-1/4 text-center"
+      >
         GET TICKETS!!!
       </a>
       <div class="purp disclaimer">

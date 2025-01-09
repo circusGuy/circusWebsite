@@ -10,6 +10,15 @@ const questions_answers = [
     Q: "Can tickets be purchased at the door?",
     A: "Yes, tickets can be purchased both online and in-person prior to the show.",
   },
+  {
+    Q: "Are there assigned seats?",
+    A: "No, Seating is on a first come first serve basis. All seats have equal an equal view of the show.",
+  },
+  {
+    Q: "Can we bring our own food?",
+    A: "No, Outside food and drink is not permitted in the Circus. Food is available for purchase before and during the show.",
+  },
+  
 ];
 
 function q_a_card(qObject) {

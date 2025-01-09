@@ -17,7 +17,7 @@
 .logo {
   z-index: 99;
   width: auto;
-  max-height: 17vh;
+  width: 8vw;
 }
 
 .navGroup{
@@ -78,7 +78,7 @@
   margin-right: 2vw;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .desktop-only {
     display: none;
   }
