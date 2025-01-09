@@ -1,25 +1,12 @@
 .disclaimer {
-  width: 100%;
-  background-color: purple;
-  text-align: center;
-  padding: 10px;
-  border-radius: 4px;
   font-size: 18px;
+  margin-top: 25px;
+  color: white;
 }
 
 .link {
   color: #efc524;
   text-decoration: underline;
-}
-
-.locHeader {
-  color: #efc524;
-  font-size: 1.5vw;
-  font-weight: bold;
-  width: 100%;
-  background-color: purple;
-  display: flex;
-  justify-content: center;
 }
 
 .eventCard {
