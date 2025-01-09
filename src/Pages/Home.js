@@ -9,8 +9,8 @@ export default function Home() {
       <h1 class="titleText purp">Welcome to the Kingdom of Wonders Circus</h1>
 
       <div class="subPage">
-        <img src={homePic} alt="Kingdom Of Wonders Circus" class="homePic desktop-only" />
-        <img src={homePic2} alt="Kingdom Of Wonders Circus" class="homePic mobile-only" />
+        <img src={homePic} alt="Kingdom Of Wonders Circus" class="homePic" />
+        <img src={homePic2} alt="Kingdom Of Wonders Circus" class="homePic2" />
       </div>
       <div class="subPage purp pad">
         <h1 class="titleText">A Place Where Dreams Come True</h1>
