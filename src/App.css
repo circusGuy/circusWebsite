@@ -56,7 +56,7 @@ body::-webkit-scrollbar {
   border-radius: 4px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 900px) {
   .shader {
     padding-top: 17%;
   }

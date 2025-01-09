@@ -1,5 +1,4 @@
 import {
-  Stack,
   Drawer,
   IconButton,
   List,
@@ -9,7 +8,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import "../CSS/header.css";
 import logo from "../Images/kingdom-of-wonders.png";
@@ -18,7 +17,6 @@ export default function Header() {
   const location = useLocation();
   const path = location.pathname;
   const [isDrawerOpen, setDrawerOpen] = useState(false);
-  const navigate = useNavigate();
 
   const toggleDrawer = (open) => () => {
     setDrawerOpen(open);
@@ -28,52 +26,35 @@ export default function Header() {
     <>
       <div class="navbar desktop-only">
         <div class="header-container">
-          <img
-            src={logo}
-            alt="Kingdom of Wonders Logo"
-            className="logo"
-            onClick={() => navigate("/")}
-          />
+          <img src={logo} alt="Kingdom of Wonders Logo" className="logo" />
 
           {/* Desktop Navigation */}
-          <div className="lollipop-bar border border-white border-opacity-20">
-            <Stack direction="row" spacing={39}>
-              <Stack direction="row" spacing={12}>
-                <a href="/" class={`${path === "/" ? "active" : ""}`}>
-                  Home
-                </a>
-                <a
-                  href="/schedule"
-                  class={`${path === "/schedule" ? "active" : ""}`}
-                >
-                  Schedule
-                </a>
-
-                <a
-                  href="/photos"
-                  class={`${path === "/photos" ? "active" : ""}`}
-                >
-                  Gallery
-                </a>
-              </Stack>
-              <Stack direction="row" spacing={12}>
-                <a
-                  href="/concessions"
-                  class={`${path === "/concessions" ? "active" : ""}`}
-                >
-                  Concessions
-                </a>
-                <a href="/faq" class={`${path === "/faq" ? "active" : ""}`}>
-                  FAQ
-                </a>
-                <a
-                  href="/contact"
-                  class={`${path === "/contact" ? "active" : ""}`}
-                >
-                  Contact
-                </a>
-              </Stack>
-            </Stack>
+          <div class="navGroup">
+            <a href="/" class={`${path === "/" ? "active" : ""}`}>
+              Home
+            </a>
+            <a
+              href="/schedule"
+              class={`${path === "/schedule" ? "active" : ""}`}
+            >
+              Schedule
+            </a>
+            <a href="/photos" class={`${path === "/photos" ? "active" : ""}`}>
+              Gallery
+            </a>
+            &nbsp;
+            <a
+              href="/concessions"
+              class={`${path === "/concessions" ? "active" : ""}`}
+            >
+              Concessions
+            </a>
+            <a href="/faq" class={`${path === "/faq" ? "active" : ""}`}>
+              FAQ
+            </a>
+            <a href="/contact" class={`${path === "/contact" ? "active" : ""}`}>
+              Contact
+            </a>
           </div>
         </div>
       </div>
@@ -113,13 +94,12 @@ export default function Header() {
           }}
         >
           <div className="drawer-header mt-3">
-            <IconButton
-              edge="end"
-              aria-label="close"
-              onClick={toggleDrawer(false)}
-              className="close-button"
-            >
-              <CloseIcon />
+            <IconButton>
+              <CloseIcon
+                onClick={toggleDrawer(false)}
+                className="close-button"
+                sx={{color: "#efc524"}}
+              />
             </IconButton>
           </div>
           <List className="drawer-list">

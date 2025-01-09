@@ -3,9 +3,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding-top: 5%;
-  align-self: center;
-  justify-self: center;
+  padding-top: 4.5%;
 }
 
 .header-container {
@@ -19,38 +17,36 @@
 .logo {
   z-index: 99;
   width: auto;
-  max-height: 18vh;
+  max-height: 17vh;
 }
 
-.lollipop-bar {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.navGroup{
   position: fixed;
+  background-color: purple;
   width: 90%;
   padding-top: 1.2%;
   padding-bottom: 1.2%;
-  background-color: purple;
-  z-index: 1;
-  border-radius: 4px;
-}
-
-.lollipop-bar a {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  column-gap: 9%;
   text-decoration: none;
   color: white;
   font-weight: bold;
   font-size: 1.3vw;
   text-shadow: 0 5px 6px rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+  border: 1px solid rgba(255,255,255,0.2);
 }
 
-.lollipop-bar a:hover {
+.navGroup a:hover {
   text-decoration: underline;
   text-decoration-color: #efc524;
   text-decoration-thickness: 0.5vh;
   text-underline-offset: 1vh;
 }
 
-.lollipop-bar .active {
+.navGroup .active {
   color: #efc524;
   text-decoration: underline;
   text-decoration-color: #efc524;
@@ -80,10 +76,9 @@
   justify-content: flex-end;
   margin-left: auto;
   margin-right: 2vw;
-  color: white;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) {
   .desktop-only {
     display: none;
   }
