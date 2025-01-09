@@ -4,6 +4,10 @@
   margin-bottom: 20px;
 }
 
+.homePic2{
+  display: none;
+}
+
 .homeDesc {
   color: white;
   font-size: 21px;
@@ -36,6 +40,9 @@
 @media screen and (max-width: 800px) {
   .homePic2 {
     display: block;
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 20px;
   }
 
   .homePic {
