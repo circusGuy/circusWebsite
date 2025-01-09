@@ -1,4 +1,6 @@
 import homePic from "../Images/homePic2.png";
+import homePic2 from "../Images/homePic3.png";
+
 import "../CSS/home.css";
 
 export default function Home() {
@@ -7,7 +9,8 @@ export default function Home() {
       <h1 class="titleText purp">Welcome to the Kingdom of Wonders</h1>
 
       <div class="subPage">
-        <img src={homePic} alt="Kingdom Of Wonders Circus" class="homePic" />
+        <img src={homePic} alt="Kingdom Of Wonders Circus" class="homePic desktop-only" />
+        <img src={homePic2} alt="Kingdom Of Wonders Circus" class="homePic mobile-only" />
       </div>
       <div class="subPage purp pad">
         <h1 class="titleText">A Place Where Dreams Come True</h1>
