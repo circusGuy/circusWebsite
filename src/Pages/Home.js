@@ -4,7 +4,7 @@ import "../CSS/home.css";
 export default function Home() {
   return (
     <div class="page">
-      <h1 class="titleText purp">Welcome to the Kingdom of Wonders</h1>
+      <h1 class="titleText purp">Welcome to the Kingdom of Wonders Circus</h1>
 
       <div class="subPage">
         <img src={homePic} alt="Kingdom Of Wonders Circus" class="homePic" />
