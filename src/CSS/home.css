@@ -13,11 +13,10 @@
   font-size: 21px;
   text-align: center;
   text-shadow: 0 5px 6px rgba(0, 0, 0, 0.7);
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .tixBtn {
-  margin-top: 20px;
   background-color: #efc524;
   color: purple;
   font-size: 20px;

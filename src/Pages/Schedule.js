@@ -38,12 +38,12 @@ export default function Schedule() {
       <h1 class="titleText purp">Upcoming Events</h1>
       {EventCard(
         "https://purchase-tickets-forthe-kingdom-of-wonders.square.site/shop/macclenny-fl-feb-19-21/XKI2UTFG447AT4PMXBTLIKV5?page=1&limit=30&sort_by=category_order&sort_order=asc",
-        "Macclenny, Florida",
+        "Macclenny, FL",
         "February 19th - February 21st"
       )}
       {EventCard(
         "https://purchase-tickets-forthe-kingdom-of-wonders.square.site/shop/ashburn-ga-feb-28-mar-1/7S6X7M45M2MBSPEHNURZODSO?page=1&limit=30&sort_by=category_order&sort_order=asc",
-        "Ashburn, Georgia",
+        "Ashburn, GA",
         "February 28th - March 1st"
       )}
       <div class="purp disclaimer">
