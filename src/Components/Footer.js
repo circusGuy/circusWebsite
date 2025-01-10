@@ -9,13 +9,13 @@ export default function Footer() {
           © 2025 Leifland Productions, LLC | All Rights Reserved
         </a>
         <div class="logos">
-          <a href="https://www.facebook.com/UMDclubrunning/" class="link">
+          <a href="https://www.facebook.com/" class="link">
             <FaFacebook size={25} />
           </a>
-          <a href="https://twitter.com/umdclubrunning" class="link">
+          <a href="https://twitter.com/" class="link">
             <FaTwitter size={25} />
           </a>
-          <a href="https://www.instagram.com/umdclubrunning/" class="link">
+          <a href="https://www.instagram.com/kingdomofwonderscircus/" class="link">
             <FaInstagram size={25} />
           </a>
         </div>

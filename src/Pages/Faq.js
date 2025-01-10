@@ -12,11 +12,15 @@ const questions_answers = [
   },
   {
     Q: "Are there assigned seats?",
-    A: "No, Seating is on a first come first serve basis. All seats have equal an equal view of the show.",
+    A: "No, Seating is on a first come first serve basis. All seats have an equal view of the show.",
   },
   {
     Q: "Can we bring our own food?",
     A: "No, Outside food and drink is not permitted in the Circus. Food is available for purchase before and during the show.",
+  },
+  {
+    Q: "How long is the show?",
+    A: "The show is 1 1/2 hours long.",
   },
   
 ];
