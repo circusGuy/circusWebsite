@@ -21,7 +21,7 @@ function EventCard(link, location, dateRange) {
             alignItems: "center",
             color: "grey",
             fontSize: "15px",
-            marginTop:'5px'
+            marginTop: "5px",
           }}
         >
           <FaMapMarkerAlt style={{ marginRight: "5px" }} />
@@ -46,14 +46,6 @@ export default function Schedule() {
         "Ashburn, Georgia",
         "February 28th - March 1st"
       )}
-
-      <a
-        href="https://purchase-tickets-forthe-kingdom-of-wonders.square.site/"
-        target="_self"
-        class="tixBtn w-1/4 text-center"
-      >
-        GET TICKETS!!!
-      </a>
       <div class="purp disclaimer">
         <em>
           All Sales are Final. In Making a Purchase and attending any of our
@@ -63,6 +55,13 @@ export default function Schedule() {
           </a>
         </em>
       </div>
+      <a
+        href="https://purchase-tickets-forthe-kingdom-of-wonders.square.site/"
+        target="_self"
+        class="tixBtn w-1/4 text-center"
+      >
+        GET TICKETS!!!
+      </a>
     </div>
   );
 }

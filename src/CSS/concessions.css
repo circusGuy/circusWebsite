@@ -20,41 +20,56 @@
 }
 
 .foodDesc {
-  background-color: rgba(128, 0, 128, 0.8);
   color: white;
   font-size: 20px;
   width: 100%;
   padding: 10px;
-  padding-bottom: 20px;
   text-align: center;
   margin-bottom: 15px;
   margin-top: 20px;
   border-radius: 5px;
-}
-
-.foodGallery {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  column-gap: 25px;
-  row-gap: 15px;
+  flex-direction: column;
   justify-content: center;
-  margin-bottom: 10px;
+  align-content: center;
 }
 
-.titleFood {
-  color: #efc524;
-  font-size: 30px;
-  margin-bottom: 2vh;
-  text-shadow: 0 5px 6px rgba(0, 0, 0, 0.7);
+.concessions {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  justify-content: center;
 }
 
-.foodGallery img {
-  height: 200px;
-  object-fit: contain;
-  border-radius: 20px;
 
+.stock-ticker {
+  width: 95%;
+  overflow: hidden;
+  user-select: none;
+  --gap: 20px;
+  display: flex;
+  gap: var(--gap);
+  z-index:-1;
 }
+
+.stock-ticker ul {
+  list-style: none;
+  flex-shrink: 0;
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap);
+
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-100% - var(--gap) ));
+  }
+}
+
 
 @media screen and (max-width: 1200px) {
   .foodGallery img {

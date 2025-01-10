@@ -36,12 +36,15 @@ body::-webkit-scrollbar {
 }
 
 .subPage {
+  background-color: rgba(0,0,0,0.4);
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
   align-items: center;
-  margin-bottom: 10px;
+  padding-bottom: 25px;
+  border-radius: 5px;
 }
 
 .pad {
@@ -53,8 +56,23 @@ body::-webkit-scrollbar {
   border-radius: 4px;
 }
 
+.subPage3 {
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding-bottom: 25px;
+  border-radius: 5px;
+}
+
 @media screen and (max-width: 800px) {
   .padder {
     padding-top: 17%;
+  }
+
+  .subPage{
+    background-color: transparent;
   }
 }
