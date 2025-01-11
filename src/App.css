@@ -67,7 +67,12 @@ body::-webkit-scrollbar {
   border-radius: 5px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
+  .titleText {
+    font-size: 26.5px;
+   
+  }
+
   .padder {
     padding-top: 17%;
   }

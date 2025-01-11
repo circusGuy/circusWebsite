@@ -8,8 +8,9 @@ const images = importAllImages(
 export default function Photos() {
   return (
     <div class="page concs">
-      <h1 class="titleText purp">Gallery</h1>
       <div class="subPage">
+      <h1 class="titleText purp">Gallery</h1>
+
         <div class="gallery mb-10 mt-5">
           {images.map((img, index) => (
             <img key={index} src={img} alt={`gallery-item-${index}`} />

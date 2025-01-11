@@ -2,7 +2,7 @@ import "../CSS/schedule.css";
 import toc from "../Images/KoW Terms and Conditions page.pdf";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
-function EventCard(link, location, dateRange,address) {
+function EventCard(link, location, dateRange, address) {
   return (
     <div class="eventCard">
       <a
@@ -44,7 +44,7 @@ export default function Schedule() {
       )}
       {EventCard(
         "https://purchase-tickets-forthe-kingdom-of-wonders.square.site/shop/folkstown-ga-feb-22-23/2RTXQI2HNN2PNXZ7O4QFF5N5",
-        "Folkstown, GA",
+        "Folkston, GA",
         "February 22nd - February 23rd",
         "3795 Main St, Folkston, GA 31537"
       )}
@@ -62,8 +62,8 @@ export default function Schedule() {
       )}
       <div class="purp disclaimer">
         <em>
-          All Sales are Final. In Making a Purchase and attending any of our
-          shows, Users are agreeing to our{" "}
+          All sales are final. In making a purchase and attending any of our
+          shows, users are agreeing to our{" "}
           <a href={toc} class="link" target="_blank" rel="noopener noreferrer">
             Terms and Conditions
           </a>

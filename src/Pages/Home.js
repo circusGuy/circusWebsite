@@ -6,8 +6,9 @@ import "../CSS/home.css";
 export default function Home() {
   return (
     <div class="page">
-      <h1 class="titleText purp">Welcome to the Kingdom of Wonders Circus</h1>
       <div class="subPage3">
+      <h1 class="titleText purp">Welcome to the Kingdom of Wonders Circus</h1>
+
         <img src={homePic} alt="Kingdom Of Wonders Circus" class="homePic" />
         <img src={homePic2} alt="Kingdom Of Wonders Circus" class="homePic2" />
         <div class="pad flex flex-col align-center justify-center">

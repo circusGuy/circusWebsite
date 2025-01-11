@@ -9,8 +9,8 @@ import waffle from "../Images/concessions/waffle.png";
 export default function Concessions() {
   return (
     <div className="page p-4 concs">
-      <h1 class="titleText purp">Concessions</h1>
       <div class='subPage3'>
+      <h1 class="titleText purp">Concessions</h1>
       <div class="foodDesc">
         <h1 class="titleText">Food/Drink</h1>
         <div class="desc">

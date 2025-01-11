@@ -91,6 +91,9 @@
     width: 250px;
   }
   .logo {
-    max-height: 7vh;
+    width:15%;
+    margin-left: 2vw;
+    margin-top: 1vw;
+
   }
 }

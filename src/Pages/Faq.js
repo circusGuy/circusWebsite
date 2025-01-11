@@ -1,4 +1,3 @@
-import { Divider, Stack } from "@mui/material";
 import "../CSS/faq.css";
 
 const questions_answers = [
@@ -20,24 +19,21 @@ const questions_answers = [
   },
   {
     Q: "How long is the show?",
-    A: "The show is 1 1/2 hours long.",
+    A: "The show is 1 hour and 30 minutes long.",
   },
-  
 ];
 
 function q_a_card(qObject) {
   return (
     <div class="qaCard">
-      <Stack direction="column">
         <div class="mb-2">
           <strong>Q: {qObject.Q}</strong>
         </div>
-        <Divider className="w-3/5 bg-goldenYellow h-1" />
+        <hr class="divider" />
         <div class="mt-2">
           <strong>A: </strong>
           <em>{qObject.A}</em>
         </div>
-      </Stack>
     </div>
   );
 }
@@ -46,7 +42,7 @@ export default function Faq() {
   const cards = questions_answers.map((qa) => q_a_card(qa));
 
   return (
-    <div class="page lg:w-[70%] md:w-full justify-self-center align-center">
+    <div class="page">
       <div class="subPage">
         <h1 class="titleText purp">Frequently Asked Questions</h1>
 

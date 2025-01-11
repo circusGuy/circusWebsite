@@ -1,19 +1,28 @@
 .qaCard {
-  width: 100%;
-  font-size: 19px;
-  background-color: rgba(128, 0, 128, 0.92);
+  width: 60%;
+  font-size: 20px;
   color: white;
   padding: 2vw;
   border-radius: 4px;
   margin-bottom: 2vh;
   text-shadow: 0 5px 6px rgba(0, 0, 0, 0.7);  
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider{
+  background-color: #efc524;
+  border-top: 4px solid #efc524;
+  width: 100%;
 }
 
 
 @media screen and (max-width: 1200px) {
   .qaCard {
     width: 100%;
-    font-size: 18px;  
     padding: 5vw; 
   }
 }
