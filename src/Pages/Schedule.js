@@ -44,7 +44,7 @@ export default function Schedule() {
       )}
       {EventCard(
         "https://purchase-tickets-forthe-kingdom-of-wonders.square.site/shop/folkstown-ga-feb-22-23/2RTXQI2HNN2PNXZ7O4QFF5N5",
-        "Folkstown, GA",
+        "Folkston, GA",
         "February 22nd - February 23rd",
         "3795 Main St, Folkston, GA 31537"
       )}
