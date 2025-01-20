@@ -35,11 +35,28 @@ function EventCard(link, location, dateRange, address) {
 export default function Schedule() {
   return (
     <div class="page concs">
-      <h1 class="titleText purp">Upcoming Events</h1>
+      <h1 class="titleText purp">
+        Upcoming Events
+        <div class="disclaimer">
+          <em>
+            All sales are final. In making a purchase and attending any of our
+            shows, users are agreeing to our{" "}
+            <a
+              href={toc}
+              class="link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Terms and Conditions
+            </a>
+          </em>
+        </div>
+      </h1>
+
       {EventCard(
         "https://purchase-tickets-forthe-kingdom-of-wonders.square.site/shop/macclenny-fl-feb-19-21/XKI2UTFG447AT4PMXBTLIKV5",
         "Macclenny, FL",
-        "February 19th - February 21st",
+        "February 18th - February 20th",
         "5567 Lauramore Rd, Macclenny, FL 32063"
       )}
       {EventCard(
@@ -60,15 +77,7 @@ export default function Schedule() {
         "March 2nd",
         "122 N Main St, Sylvester, GA 31791"
       )}
-      <div class="purp disclaimer">
-        <em>
-          All sales are final. In making a purchase and attending any of our
-          shows, users are agreeing to our{" "}
-          <a href={toc} class="link" target="_blank" rel="noopener noreferrer">
-            Terms and Conditions
-          </a>
-        </em>
-      </div>
+
       <a
         href="https://purchase-tickets-forthe-kingdom-of-wonders.square.site/"
         target="_self"
