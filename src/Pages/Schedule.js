@@ -65,6 +65,12 @@ export default function Schedule() {
         "February 22nd - February 23rd",
         "3795 Main St, Folkston, GA 31537"
       )}
+       {EventCard(
+        "https://purchase-tickets-forthe-kingdom-of-wonders.square.site/shop/226-227-sylvester-ga/6UUT6E6I5GCPZPRZH7BHPYGE",
+        "Sylvester, GA",
+        "February 26th - February 27th",
+        "122 N Main St, Sylvester, GA 31791"
+      )}
       {EventCard(
         "https://purchase-tickets-forthe-kingdom-of-wonders.square.site/shop/ashburn-ga-feb-28-mar-1/7S6X7M45M2MBSPEHNURZODSO",
         "Ashburn, GA",
@@ -72,10 +78,10 @@ export default function Schedule() {
         "705 Hudson Ave, Ashburn, GA 31714"
       )}
       {EventCard(
-        "https://purchase-tickets-forthe-kingdom-of-wonders.square.site/shop/sylvester-ga-mar-2/6UUT6E6I5GCPZPRZH7BHPYGE",
-        "Sylvester, GA",
+        "https://purchase-tickets-forthe-kingdom-of-wonders.square.site/shop/32-adel-ga/IKLKA64XPP3OB6H6PMDYL5BQ",
+        "Adel, GA",
         "March 2nd",
-        "122 N Main St, Sylvester, GA 31791"
+        "2521 US-41, Adel, GA 31620"
       )}
 
       <a
