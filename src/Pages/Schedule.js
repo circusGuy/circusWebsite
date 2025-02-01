@@ -60,10 +60,10 @@ export default function Schedule() {
         "5567 Lauramore Rd, Macclenny, FL 32063"
       )}
       {EventCard(
-        "https://purchase-tickets-forthe-kingdom-of-wonders.square.site/shop/folkstown-ga-feb-22-23/2RTXQI2HNN2PNXZ7O4QFF5N5",
-        "Folkston, GA",
+        "https://purchase-tickets-forthe-kingdom-of-wonders.square.site/shop/222-223-homeland-ga/7S6X7M45M2MBSPEHNURZODSO",
+        "Homeland, GA",
         "February 22nd - February 23rd",
-        "3795 Main St, Folkston, GA 31537"
+        "100 Bowery Lane, Homeland, GA, 31537"
       )}
        {EventCard(
         "https://purchase-tickets-forthe-kingdom-of-wonders.square.site/shop/226-227-sylvester-ga/6UUT6E6I5GCPZPRZH7BHPYGE",
