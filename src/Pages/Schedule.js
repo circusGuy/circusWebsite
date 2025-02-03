@@ -83,6 +83,12 @@ export default function Schedule() {
         "March 2nd",
         "2521 US-41, Adel, GA 31620"
       )}
+      {EventCard(
+        "https://purchase-tickets-forthe-kingdom-of-wonders.square.site/shop/319-320-chester-sc/C2KJR2W7VERKIHW3ULB2QDFY",
+        "Chester, SC",
+        "March 19th - 20th",
+        "2355 Great Fall, SC 29014"
+      )}
 
       <a
         href="https://purchase-tickets-forthe-kingdom-of-wonders.square.site/"
