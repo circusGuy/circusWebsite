@@ -67,9 +67,9 @@ export default function Schedule() {
       )}
        {EventCard(
         "https://purchase-tickets-forthe-kingdom-of-wonders.square.site/shop/226-227-sylvester-ga/6UUT6E6I5GCPZPRZH7BHPYGE",
-        "Sylvester, GA",
+        "Baxley, GA",
         "February 26th - February 27th",
-        "122 N Main St, Sylvester, GA 31791"
+        "245 Industrial Drive, Baxley, GA, 31513"
       )}
       {EventCard(
         "https://purchase-tickets-forthe-kingdom-of-wonders.square.site/shop/ashburn-ga-feb-28-mar-1/7S6X7M45M2MBSPEHNURZODSO",
