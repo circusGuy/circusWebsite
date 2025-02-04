@@ -87,7 +87,7 @@ export default function Schedule() {
         "https://purchase-tickets-forthe-kingdom-of-wonders.square.site/shop/319-320-chester-sc/C2KJR2W7VERKIHW3ULB2QDFY",
         "Chester, SC",
         "March 19th - 20th",
-        "2355 Great Fall, SC 29014"
+        "2355 Great Fall, Chester, SC 29014"
       )}
 
       <a
