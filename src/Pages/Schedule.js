@@ -84,6 +84,12 @@ export default function Schedule() {
         "2521 US-41, Adel, GA 31620"
       )}
       {EventCard(
+        "https://purchase-tickets-forthe-kingdom-of-wonders.square.site/shop/38-39-barnesville-ga/IHZQFJXBBC5ZNWLFWOX2FPBC",
+        "Barnesville, GA",
+        "March 8th - 9th",
+        "100 Louis Dr, Barnesville, GA 30204"
+      )}
+      {EventCard(
         "https://purchase-tickets-forthe-kingdom-of-wonders.square.site/shop/319-320-chester-sc/C2KJR2W7VERKIHW3ULB2QDFY",
         "Chester, SC",
         "March 19th - 20th",
