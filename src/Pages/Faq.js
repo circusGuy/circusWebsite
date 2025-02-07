@@ -21,6 +21,10 @@ const questions_answers = [
     Q: "How long is the show?",
     A: "The show is 1 hour and 30 minutes long.",
   },
+  {
+    Q: "How much are tickets?",
+    A: "Tickets are $25.00 per adult and $15 per child.",
+  },
 ];
 
 function q_a_card(qObject) {
