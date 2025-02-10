@@ -23,7 +23,7 @@ const questions_answers = [
   },
   {
     Q: "How much are tickets?",
-    A: "Tickets are $25.00 per adult and $15 per child.",
+    A: "Tickets are $25.00 per adult (ages 18+) and $15 per child (under 18).",
   },
 ];
 
