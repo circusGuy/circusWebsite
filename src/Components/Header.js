@@ -52,7 +52,7 @@ export default function Header() {
             <a href="/faq" class={`${path === "/faq" ? "active" : ""}`}>
               FAQ
             </a>
-            <a href="/contact" class={`${path === "/contact" ? "active" : ""}`}>
+            <a href="/contact" id='contact' class={`${path === "/contact" ? "active" : ""}`}>
               Contact
             </a>
           </div>
