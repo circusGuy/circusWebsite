@@ -11,7 +11,7 @@ export default function Photos() {
       <div class="subPage">
       <h1 class="titleText purp">Gallery</h1>
 
-        <div class="gallery mb-10 mt-5">
+        <div class="gallery">
           {images.map((img, index) => (
             <img key={index} src={img} alt={`gallery-item-${index}`} />
           ))}

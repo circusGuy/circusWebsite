@@ -5,6 +5,8 @@
   column-gap: 25px;
   row-gap: 15px;
   justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 30px;
 }
 
 .gallery img {

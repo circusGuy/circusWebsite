@@ -11,7 +11,7 @@ export default function Home() {
 
         <img src={homePic} alt="Kingdom Of Wonders Circus" class="homePic" />
         <img src={homePic2} alt="Kingdom Of Wonders Circus" class="homePic2" />
-        <div class="pad flex flex-col align-center justify-center">
+        <div class="pad">
           <p class="homeDesc">
           <h1 class="titleText">A Place Where Dreams Come True</h1>
             The Queen is holding court and YOU are invited to come and enjoy the
