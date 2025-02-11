@@ -16,7 +16,7 @@ export default function Contact() {
               <div class="form">
                 <div class="formColumn">
                   <div>
-                    <select name="reason" required>
+                    <select id='reason' name="reason" required>
                       <option value="" disabled selected>
                         Reason for Contacting
                       </option>
@@ -27,6 +27,7 @@ export default function Contact() {
 
                   <input
                     type="text"
+                    id='name'
                     name="name"
                     placeholder="Full Name"
                     autocomplete="off"
@@ -34,6 +35,7 @@ export default function Contact() {
                   />
                   <input
                     type="email"
+                    id='email'
                     name="email"
                     placeholder="Email Address"
                     autocomplete="off"
@@ -41,6 +43,7 @@ export default function Contact() {
                   />
                   <input
                     type="text"
+                    id='orderNum'
                     name="orderNum"
                     placeholder="Order Number"
                     autocomplete="off"
@@ -50,6 +53,7 @@ export default function Contact() {
                 <div class="formColumn">
                   <textarea
                     rows="10"
+                    id='msg'
                     cols="60"
                     name="message"
                     placeholder="What Can We Help You With?"
@@ -59,7 +63,7 @@ export default function Contact() {
                 </div>
               </div>
               <Divider class="mt-2 mb-5" />
-              <button type="submit" className="submitBtn">
+              <button id='submit' type="submit" className="submitBtn">
                 Send
               </button>
             </form>
