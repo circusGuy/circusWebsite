@@ -9,7 +9,7 @@ export default function Footer() {
           © 2025 Leifland Productions, LLC | All Rights Reserved
         </a>
         <div class="logos">
-          <a href="https://www.facebook.com/" class="link">
+          <a href="https://www.facebook.com/profile.php?id=61572620351447" class="link">
             <FaFacebook size={25} />
           </a>
           <a href="https://twitter.com/" class="link">
