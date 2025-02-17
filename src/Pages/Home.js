@@ -17,7 +17,7 @@ export default function Home() {
             The Queen is holding court and YOU are invited to come and enjoy the
             entertainment! Wonder at the talent in her kingdom including
             acrobatics, juggling, and comedy presented by her subjects. There
-            may be a little trouble along the way with a pesky neighborhood
+            may be a little trouble along the way with the pesky neighborhood
             witch and her pet dragon, but with the help of a valiant knight and a brave audience,
             the generous and kind Queen shall rule again!
           </p>
