@@ -18,7 +18,7 @@ export default function Home() {
             entertainment! Wonder at the talent in her kingdom including
             acrobatics, juggling, and comedy presented by her subjects. There
             may be a little trouble along the way with a pesky neighborhood
-            dragon but with the help of a valiant knight and a brave audience,
+            witch and her pet dragon, but with the help of a valiant knight and a brave audience,
             the generous and kind Queen shall rule again!
           </p>
         </div>
