@@ -24,7 +24,7 @@ const questions_answers = [
   {
     Q: "How much are tickets?",
     A: "Tickets are $25.00 per adult (ages 18+) and $15 per child (under 18).",
-  },
+  }
 ];
 
 function q_a_card(qObject) {
