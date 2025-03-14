@@ -24,9 +24,21 @@
     "address":"748 McCutcheon Rd Lake City, SC, 29560"
   },
   {
+    "link":"https://purchase-tickets-forthe-kingdom-of-wonders.square.site/shop/326-328-orangeburg-sc/3RFFSBJLOIBROIOHGFK57JY3",
+    "loc": "Orangeburg, SC",
+    "dates":"March 26th - 28th",
+    "address":"350 Magnolia St, Orangeburg, SC 29115"
+  },
+  {
     "link":"https://purchase-tickets-forthe-kingdom-of-wonders.square.site/shop/329-330-barnwell-sc/2I75PKPN4XSI7VRQKXCR6U7K",
     "loc": "Barnwell, SC",
     "dates":"March 29th - 30th",
     "address":"12403 Ellenton Street Barnwell, SC, 29812"
+  },
+  {
+    "link":"https://purchase-tickets-forthe-kingdom-of-wonders.square.site/shop/43-46-kinston-nc/LFYJX536FW2WNCAHST3VGP3K",
+    "loc": "Kinston, NC",
+    "dates":"April 3rd - 6th",
+    "address":"401 Fairgrounds Rd, Kinston, NC 28504"
   }
 ]
